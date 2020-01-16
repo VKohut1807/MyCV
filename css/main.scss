@@ -87,6 +87,7 @@ body{
 .display-none{display: none;}
 .display-block{display: block;}
 
+
 header{
     flex-grow: 0;
     width: 100%;
@@ -736,6 +737,7 @@ footer{
                 background-size: cover;
             
                 h1{
+                    padding-top: 2.5em;
                     font-size: 4em;
                 }
 
