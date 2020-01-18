@@ -279,6 +279,11 @@ header{
                     height: 115px;
                     display: flex;
 
+                    #ajax{
+                        -moz-transform: rotate(90deg);
+                        -webkit-transform: rotate(90deg);
+                    }
+
                     img{
                         width: 90px;
                         margin: 5px 0 5px 5px;
@@ -406,6 +411,59 @@ footer{
                 transition: 0.5s;
                 padding-left: 1em;
             }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+            }
+        
+            ul > li{
+                padding-bottom: 1em;
+                display: flex;
+                justify-content: space-between;
+        
+                textarea{
+                    resize: vertical;
+                    height: 5em;
+                }
+                
+                .down-button{
+                    width: 45%;
+                    border: 3px solid $colOrange;
+                    height: 40px;
+                    padding: 0;
+                    border-radius: .25em;
+        
+                    img{
+                        vertical-align: middle;
+                    }
+                }
+        
+                .down-button:hover{
+                    background: $colOrange;
+                }
+        
+                .down-button:last-child{
+                    border: 3px solid $colRed;
+                }
+        
+                .down-button:last-child:hover{
+                    background: $colRed;
+                }
+            }
+        
+            li > input, textarea{
+                width: 100%;
+                min-height: 30px;
+                padding: .5em;
+                border: 3px solid $colWhite;
+                border-radius: 1em;
+            }
+        
+            li > input:hover, textarea:hover{
+                border: 3px solid $colOrange;
+                width: 100%;
+            }
         }
     }
 
@@ -417,60 +475,10 @@ footer{
             vertical-align: middle;
             margin-right: 0.5em;
             color: $colWhite;
-            border-radius: 50%;
             filter: invert(100%);
             -webkit-filter:invert(100%); 
-            max-width: 24px;
+            max-width: 1.5em;
         }
-    }
-
-    ul{
-        display: flex;
-        flex-direction: column;
-    }
-
-    ul > li{
-        padding-bottom: 10px;
-        display: flex;
-        justify-content: flex-end;
-
-        textarea{
-            resize: vertical;
-            height: 5em;
-        }
-        
-        .down-button{
-            width: 45%;
-            border: 3px solid $colOrange;
-            height: 40px;
-            padding: 0;
-            border-radius: .25em;
-        }
-
-        .down-button:hover{
-            background: $colOrange;
-        }
-
-        .down-button:last-child{
-            border: 3px solid $colRed;
-        }
-
-        .down-button:last-child:hover{
-            background: $colRed;
-        }
-    }
-
-    li > input, textarea{
-        width: 100%;
-        min-height: 30px;
-        padding: .5em;
-        border: 3px solid $colWhite;
-        border-radius: 1em;
-    }
-
-    li > input:hover, textarea:hover{
-        border: 3px solid $colOrange;
-        width: 100%;
     }
 }
 
@@ -630,18 +638,12 @@ footer{
         footer{
 
             .foot-block{
-                display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap-reverse;
         
-                .foot-element{
-                    font-size: 75%;
-                    display: flex;
-                    flex-direction: column;
-                    min-width: 40%;
-                }
-
                 .foot-element:last-child{
-                    display: none;
+                    width: 100%;
+                    padding-bottom: 60px;
+
                 }
             }
         }
@@ -839,8 +841,7 @@ footer{
         footer{
 
             .foot-block{
-                display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap-reverse;
         
                 .foot-element{
                     font-size: 75%;
@@ -850,7 +851,9 @@ footer{
                 }
 
                 .foot-element:last-child{
-                    display: none;
+                    width: 100%;
+                    padding-bottom: 60px;
+
                 }
             }
         }

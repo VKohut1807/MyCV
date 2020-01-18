@@ -240,6 +240,9 @@ header {
           width: 115px;
           height: 115px;
           display: flex; }
+          #main #skills .technologie .technologie-group .technologie-figure #ajax {
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg); }
           #main #skills .technologie .technologie-group .technologie-figure img {
             width: 90px;
             margin: 5px 0 5px 5px; }
@@ -321,6 +324,39 @@ footer {
         color: #FF9800;
         transition: 0.5s;
         padding-left: 1em; }
+      footer .foot-block .foot-element ul {
+        display: flex;
+        flex-direction: column; }
+      footer .foot-block .foot-element ul > li {
+        padding-bottom: 1em;
+        display: flex;
+        justify-content: space-between; }
+        footer .foot-block .foot-element ul > li textarea {
+          resize: vertical;
+          height: 5em; }
+        footer .foot-block .foot-element ul > li .down-button {
+          width: 45%;
+          border: 3px solid #FF9800;
+          height: 40px;
+          padding: 0;
+          border-radius: .25em; }
+          footer .foot-block .foot-element ul > li .down-button img {
+            vertical-align: middle; }
+        footer .foot-block .foot-element ul > li .down-button:hover {
+          background: #FF9800; }
+        footer .foot-block .foot-element ul > li .down-button:last-child {
+          border: 3px solid #DC322F; }
+        footer .foot-block .foot-element ul > li .down-button:last-child:hover {
+          background: #DC322F; }
+      footer .foot-block .foot-element li > input, footer .foot-block .foot-element textarea {
+        width: 100%;
+        min-height: 30px;
+        padding: .5em;
+        border: 3px solid #fff;
+        border-radius: 1em; }
+      footer .foot-block .foot-element li > input:hover, footer .foot-block .foot-element textarea:hover {
+        border: 3px solid #FF9800;
+        width: 100%; }
   footer a {
     color: #fff;
     transition: 0.5s; }
@@ -328,41 +364,9 @@ footer {
       vertical-align: middle;
       margin-right: 0.5em;
       color: #fff;
-      border-radius: 50%;
       filter: invert(100%);
       -webkit-filter: invert(100%);
-      max-width: 24px; }
-  footer ul {
-    display: flex;
-    flex-direction: column; }
-  footer ul > li {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: flex-end; }
-    footer ul > li textarea {
-      resize: vertical;
-      height: 5em; }
-    footer ul > li .down-button {
-      width: 45%;
-      border: 3px solid #FF9800;
-      height: 40px;
-      padding: 0;
-      border-radius: .25em; }
-    footer ul > li .down-button:hover {
-      background: #FF9800; }
-    footer ul > li .down-button:last-child {
-      border: 3px solid #DC322F; }
-    footer ul > li .down-button:last-child:hover {
-      background: #DC322F; }
-  footer li > input, footer textarea {
-    width: 100%;
-    min-height: 30px;
-    padding: .5em;
-    border: 3px solid #fff;
-    border-radius: 1em; }
-  footer li > input:hover, footer textarea:hover {
-    border: 3px solid #FF9800;
-    width: 100%; }
+      max-width: 1.5em; }
 
 @media (max-width: 480px) {
   body .wrap-1 {
@@ -445,15 +449,10 @@ footer {
     border-right: none;
     margin-right: 0%; }
   body footer .foot-block {
-    display: flex;
-    justify-content: space-between; }
-    body footer .foot-block .foot-element {
-      font-size: 75%;
-      display: flex;
-      flex-direction: column;
-      min-width: 40%; }
+    flex-wrap: wrap-reverse; }
     body footer .foot-block .foot-element:last-child {
-      display: none; } }
+      width: 100%;
+      padding-bottom: 60px; } }
 @media (max-width: 360px) {
   body .wrap-1 {
     width: 98%;
@@ -557,14 +556,14 @@ footer {
     border-right: none;
     margin-right: 0%; }
   body footer .foot-block {
-    display: flex;
-    justify-content: space-between; }
+    flex-wrap: wrap-reverse; }
     body footer .foot-block .foot-element {
       font-size: 75%;
       display: flex;
       flex-direction: column;
       min-width: 40%; }
     body footer .foot-block .foot-element:last-child {
-      display: none; } }
+      width: 100%;
+      padding-bottom: 60px; } }
 
 /*# sourceMappingURL=main.css.map */
