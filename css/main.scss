@@ -1058,3 +1058,17 @@ footer{
         }
     }
 }
+
+@media (max-width : 960px) {
+
+    body{
+
+        .wrap-1 {
+            width: 90%;
+        }
+             
+        .wrap-2 {
+            width: 80%;
+        }
+    }
+}

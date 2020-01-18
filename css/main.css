@@ -668,5 +668,10 @@ footer {
     body footer .foot-block .foot-element:last-child {
       width: 100%;
       padding-bottom: 60px; } }
+@media (max-width: 960px) {
+  body .wrap-1 {
+    width: 90%; }
+  body .wrap-2 {
+    width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */
