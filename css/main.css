@@ -668,10 +668,84 @@ footer {
     body footer .foot-block .foot-element:last-child {
       width: 100%;
       padding-bottom: 60px; } }
-@media (max-width: 960px) {
-  body .wrap-1 {
-    width: 90%; }
+@media (max-width: 768px) {
   body .wrap-2 {
-    width: 80%; } }
+    width: 90%; }
+  body header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    body header .navbar .logo {
+      order: 0;
+      display: flex;
+      align-content: flex-start; }
+    body header .navbar .about {
+      display: none; }
+    body header .navbar .menu-toggle {
+      display: block; }
+    body header .navbar .about {
+      margin: 0 auto;
+      position: absolute;
+      top: 3.5em;
+      font-size: 0.9em;
+      text-align: center; }
+      body header .navbar .about .dropdown-parent, body header .navbar .about a {
+        margin: 0 1em;
+        font-size: 1.3em; }
+      body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
+        font-size: 1.7em; }
+      body header .navbar .about .dropdown-child a {
+        font-size: 0.9em;
+        margin: 0 8em;
+        text-align: left; }
+    body header .navbar .cv {
+      display: flex;
+      justify-content: center;
+      order: 1; }
+      body header .navbar .cv a {
+        padding: 0 0.1em;
+        border-radius: 50%;
+        font-size: 1.7em;
+        align-items: center; }
+        body header .navbar .cv a .downarrow::before {
+          display: none; }
+  body #main h3 {
+    font-size: 250%; }
+  body #main #skills .technologie {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    body #main #skills .technologie .technologie-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 1em 0; }
+      body #main #skills .technologie .technologie-group .technologie-figure {
+        border: 2px solid #FF9800;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        margin: 0.25em; }
+        body #main #skills .technologie .technologie-group .technologie-figure img {
+          display: flex;
+          align-content: center;
+          margin: 0.1em auto; }
+        body #main #skills .technologie .technologie-group .technologie-figure .technologie-text {
+          -moz-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          writing-mode: horizontal-tb; }
+      body #main #skills .technologie .technologie-group .technologie-figure:not(:last-child) {
+        margin-bottom: 0em; }
+  body footer .foot-block {
+    flex-wrap: wrap-reverse; }
+    body footer .foot-block .foot-element {
+      font-size: 75%;
+      display: flex;
+      flex-direction: column;
+      min-width: 40%; }
+    body footer .foot-block .foot-element:last-child {
+      width: 100%;
+      padding-bottom: 60px; } }
 
 /*# sourceMappingURL=main.css.map */
