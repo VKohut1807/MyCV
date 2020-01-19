@@ -1059,16 +1059,160 @@ footer{
     }
 }
 
-@media (max-width : 960px) {
+@media (max-width : 768px) {
 
     body{
-
-        .wrap-1 {
-            width: 90%;
-        }
              
         .wrap-2 {
-            width: 80%;
+            width: 90%;
+        }
+
+        header{
+        
+            .navbar{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+        
+                .logo{
+                    order: 0;
+                    display: flex;
+                    align-content: flex-start;
+                }
+            
+                .about{
+                    display: none;
+                }
+
+                .menu-toggle{
+                    display: block;
+                }
+
+                .about{
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 3.5em;
+                    font-size: 0.9em;
+                    text-align: center;
+        
+                    .dropdown-parent, a{
+                        margin: 0 1em;
+                        font-size: 1.3em;
+                    }
+        
+                    .dropdown-parent:hover, a:hover{ 
+                        font-size: 1.7em;
+                    }
+
+                    .dropdown-child {
+                    
+                        a {
+                            font-size: 0.9em;
+                            margin: 0 8em;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .cv{
+                    display: flex;
+                    justify-content: center;
+                    order: 1;
+                
+                    a{
+                        padding: 0 0.1em;
+                        border-radius: 50%;
+                        font-size: 1.7em;
+                        align-items: center;
+                
+                        .downarrow::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        #main{
+
+            h3{
+                font-size: 250%;
+            }
+
+            #skills{
+
+                .technologie{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+        
+                    .technologie-group{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        margin: 1em 0;
+        
+                        .technologie-figure{
+                            border: 2px solid $colOrange;
+                            border-radius: 1em;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0.25em;
+        
+                            img{
+                                display: flex;
+                                align-content: center;
+                                margin: 0.1em auto;
+                            }
+        
+                            .technologie-text{
+                                -moz-transform: rotate(360deg);
+                                -webkit-transform: rotate(360deg);
+                                writing-mode: horizontal-tb;
+                            }
+                        }
+        
+                        .technologie-figure:not(:last-child){
+                            margin-bottom: 0em;
+                        }
+                    }
+                }
+            }
+        }
+        
+        footer{
+
+            .foot-block{
+                flex-wrap: wrap-reverse;
+        
+                .foot-element{
+                    font-size: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 40%;
+                }
+
+                .foot-element:last-child{
+                    width: 100%;
+                    padding-bottom: 60px;
+
+                }
+            }
         }
     }
-}
+}   
+
+// @media (max-width : 960px) {
+
+//     body{
+
+//         .wrap-1 {
+//             width: 90%;
+//         }
+             
+//         .wrap-2 {
+//             width: 80%;
+//         }
+//     }
+// }
