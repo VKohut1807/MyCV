@@ -1203,16 +1203,29 @@ footer{
     }
 }   
 
-// @media (max-width : 960px) {
+@media (max-width : 960px) {
 
-//     body{
+    body{
 
-//         .wrap-1 {
-//             width: 90%;
-//         }
+        .wrap-1 {
+            width: 95%;
+        }
              
-//         .wrap-2 {
-//             width: 80%;
-//         }
-//     }
-// }
+        .wrap-2 {
+            width: 95%;
+        }
+
+        header{
+        
+            .navbar{
+        
+                .about{
+        
+                    .dropdown-parent, a{
+                        margin: 0 1.7em;
+                    }
+                }
+            }
+        }
+    }
+}
