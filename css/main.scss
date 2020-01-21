@@ -530,17 +530,23 @@ footer{
                     font-size: 0.9em;
         
                     .dropdown-parent, a{
-                        margin: 0 1em;
+                        margin: 0 0.7em;
                     }
         
                     .dropdown-parent:hover, a:hover{ 
                         font-size: 1.1em;
+
                     }
 
                     .dropdown-child {
                     
-                        a {
+                        a{
                             font-size: 0.9em;
+                            margin: 0 2.5em;
+                        }
+
+                        a:hover{
+                            font-size: 1em;
                         }
                     }
                 }
@@ -724,13 +730,29 @@ footer{
                     position: absolute;
                     right: 0;
                     top: 3.5em;
+                    text-align: center;
+                    
         
                     .dropdown-parent, a{
-                        margin: 0 1.7em;
+                        margin: 0 0.5em;
                     }
         
                     .dropdown-parent:hover, a:hover{ 
                         font-size: 1.1em;
+
+                    }
+
+                    .dropdown-child {
+                    
+                        a{
+                            font-size: 0.9em;
+                            margin: 0 6em;
+                            text-align: left;
+                        }
+
+                        a:hover{
+                            font-size: 1em;
+                        }
                     }
                 }
 
@@ -906,20 +928,28 @@ footer{
                     position: absolute;
                     right: 0;
                     top: 3.5em;
-                    font-size: 0.9em;
+                    text-align: center;
         
                     .dropdown-parent, a{
-                        margin: 0 1em;
+                        margin: 0 0.7em;
                     }
         
                     .dropdown-parent:hover, a:hover{ 
-                        font-size: 1.1em;
+                        font-size: 1.2em;
+
                     }
 
                     .dropdown-child {
                     
-                        a {
+                        a{
+                            width: 100%;
                             font-size: 0.9em;
+                            margin: 0 12em;
+                            text-align: left;
+                        }
+
+                        a:hover{
+                            font-size: 1em;
                         }
                     }
                 }
@@ -1085,23 +1115,21 @@ footer{
                     margin: 0 auto;
                     position: absolute;
                     top: 3.5em;
-                    font-size: 0.9em;
                     text-align: center;
         
                     .dropdown-parent, a{
                         margin: 0 1em;
-                        font-size: 1.3em;
+                        font-size: 1.1em;
                     }
         
                     .dropdown-parent:hover, a:hover{ 
-                        font-size: 1.7em;
+                        font-size: 1.3em;
                     }
 
                     .dropdown-child {
                     
                         a {
-                            font-size: 0.9em;
-                            margin: 0 8em;
+                            margin: 0 7em;
                             text-align: left;
                         }
                     }
@@ -1213,9 +1241,15 @@ footer{
             .navbar{
         
                 .about{
+                    margin: 0 auto;
         
                     .dropdown-parent, a{
-                        margin: 0 1.7em;
+                        margin: 0 0.7em;
+                        font-size: 1.3em;
+                    }
+        
+                    .dropdown-parent:hover, a:hover{ 
+                        font-size: 1.5em;
                     }
                 }
             }
