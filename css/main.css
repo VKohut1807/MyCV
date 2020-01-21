@@ -397,11 +397,14 @@ footer {
       top: 3.5em;
       font-size: 0.9em; }
       body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 1em; }
+        margin: 0 0.7em; }
       body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
         font-size: 1.1em; }
       body header .navbar .about .dropdown-child a {
-        font-size: 0.9em; }
+        font-size: 0.9em;
+        margin: 0 2.5em; }
+      body header .navbar .about .dropdown-child a:hover {
+        font-size: 1em; }
     body header .navbar .cv {
       display: flex;
       justify-content: center;
@@ -492,11 +495,18 @@ footer {
       margin: 0 auto;
       position: absolute;
       right: 0;
-      top: 3.5em; }
+      top: 3.5em;
+      text-align: center; }
       body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 1.7em; }
+        margin: 0 0.5em; }
       body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
         font-size: 1.1em; }
+      body header .navbar .about .dropdown-child a {
+        font-size: 0.9em;
+        margin: 0 6em;
+        text-align: left; }
+      body header .navbar .about .dropdown-child a:hover {
+        font-size: 1em; }
     body header .navbar .cv {
       display: flex;
       justify-content: center;
@@ -583,13 +593,18 @@ footer {
       position: absolute;
       right: 0;
       top: 3.5em;
-      font-size: 0.9em; }
+      text-align: center; }
       body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 1em; }
+        margin: 0 0.7em; }
       body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-        font-size: 1.1em; }
+        font-size: 1.2em; }
       body header .navbar .about .dropdown-child a {
-        font-size: 0.9em; }
+        width: 100%;
+        font-size: 0.9em;
+        margin: 0 12em;
+        text-align: left; }
+      body header .navbar .about .dropdown-child a:hover {
+        font-size: 1em; }
     body header .navbar .cv {
       display: flex;
       justify-content: center;
@@ -672,16 +687,14 @@ footer {
       margin: 0 auto;
       position: absolute;
       top: 3.5em;
-      font-size: 0.9em;
       text-align: center; }
       body header .navbar .about .dropdown-parent, body header .navbar .about a {
         margin: 0 1em;
-        font-size: 1.3em; }
+        font-size: 1.1em; }
       body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-        font-size: 1.7em; }
+        font-size: 1.3em; }
       body header .navbar .about .dropdown-child a {
-        font-size: 0.9em;
-        margin: 0 8em;
+        margin: 0 7em;
         text-align: left; }
     body header .navbar .cv {
       display: flex;
@@ -737,8 +750,13 @@ footer {
     width: 95%; }
   body .wrap-2 {
     width: 95%; }
-  body header .navbar .about .dropdown-parent, body header .navbar .about a {
-    margin: 0 1.7em; }
+  body header .navbar .about {
+    margin: 0 auto; }
+    body header .navbar .about .dropdown-parent, body header .navbar .about a {
+      margin: 0 0.7em;
+      font-size: 1.3em; }
+    body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
+      font-size: 1.5em; }
   body #main h3 {
     font-size: 260%; }
   body #main #skills .technologie {
