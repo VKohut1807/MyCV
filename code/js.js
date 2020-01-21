@@ -18,19 +18,6 @@ $(document).ready(function(){
     });
 });
 
-// function buttonSend() {
-//     var name = $('#name').val();
-//     var email = $('#mail').val();
-//     var text = $('#msg').val();
-    
-//     if(email.length > 5 && email.length > 5 && text.length > 5) {
-//         $('#send').removeAttr('disabled');
-//     } 
-//     else {
-//         $('#send').attr('disabled', 'disabled');
-//     }
-// }
-
 function focusInput() { 
     document.getElementById("name").focus(); 
 }
@@ -40,19 +27,18 @@ $("#send").on("click", function(){
     var mail = $("#mail").val().trim();
     var msg = $("#msg").val().trim();
 
-    if(name.length < 5){
-        $("#result_form").text("Podaj swoje imie");
+    if(name == ""){
+        $("#result_form").text("Podaj imię");
         return false;
     }else if(mail == ""){
-        $("#result_form").text("Podaj swoje e-mail");
+        $("#result_form").text("Podaj e-mail");
         return false;
-    }else if(mail == "" || msg.length > 360){
-        $("#result_form").text("Podaj swoje text");
+    }else if(msg == "" || msg.length > 360){
+        $("#result_form").text("Wpisz krótką wiadomość (do 360znaków)");
         return false;
     }
 
-    $("#result_form").text("OK");
-
+    $("#result_form").text("Wiadomość została wysłana");
 
     $.ajax({
         url: 'code/send.php',
@@ -68,13 +54,6 @@ $("#send").on("click", function(){
                 $("#ajax_form").trigger("reset");
     
             $("#send").prop("disabled", false);
-    
-            
-        
         }
-        // },
-        // error: function(response) {
-        //     $('#result_form').html('Błąd. Brak wysłanych danych.');
-        // }
     });
 });
