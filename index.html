@@ -11,7 +11,38 @@
     <script src="code/js.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="wrap-1">
+            <div class="header_body">
+                <div href="" class="logo font-weight-1" onclick="slowScroll('#top')"><span class="logo-border">vKohuT</span></div>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li>
+                            <a class="header_link" onclick="slowScroll('#skills')">Umiejętności
+                                <!-- !!! -->
+                                <ul class="q">
+                                    <li><a onclick="slowScroll('#technologies')">Technologie</a></li>
+                                    <li><a onclick="slowScroll('#languages')">Języki</a></li>
+                                    <li><a onclick="slowScroll('#soft-skills')">Umiejętności miękie</a></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header_link" onclick="slowScroll('#experience')" class="header_link">Doswiadczenie</a>
+                        </li>
+                        <li>
+                            <a class="header_link" onclick="slowScroll('#study')" class="header_link">Edukacja</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- <header>
         <div class="wrap-1 navbar">
             <div class="menu-toggle">&#9776;</div>
             <div class="logo font-weight-1" onclick="slowScroll('#top')"><span class="logo-border">vKohuT</span></div>
@@ -30,7 +61,7 @@
                 <a download href="download/VasylKohutCV.pdf"><span class="downarrow"> </span>CV</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <section id="main">
         <section id="top">
