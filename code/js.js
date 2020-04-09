@@ -4,22 +4,8 @@ function slowScroll(id){
     }, 500);
 }
 
-$(document).on("scroll", function(){
-    if($(window).scrollTop() === 0)
-        $("header").removeClass("fixed");
-    else {
-        $("header").attr("class", "fixed");
-    }
-})
-
-$(document).ready(function(){
-    $(".menu-toggle").click(function(){
-        $(".about").toggle(function(){});
-    });
-});
-
-function focusInput() { 
-    document.getElementById("name").focus(); 
+function focusInput() {
+    document.getElementById("name").focus();
 }
 
 $("#send").on("click", function(){
@@ -52,8 +38,34 @@ $("#send").on("click", function(){
                 alert("pomylky")
             else
                 $("#ajax_form").trigger("reset");
-    
+
             $("#send").prop("disabled", false);
         }
     });
 });
+
+function burgerMenu(selector) {
+    let menu = $(selector);
+    let button = menu.find('.burger-button');
+    let links = menu.find('.burger-link');
+    let podLinks = menu.find('.burger-podLink');
+    let notScroll = menu.find('.menu-burger-notScroll');
+
+    button.on('click', (e) => {
+        e.preventDefault();
+        toggleMenu();
+    });
+    links.on('click', () => toggleMenu());
+    podLinks.on('click', () => toggleMenu());
+    notScroll.on('click', () => toggleMenu());
+
+    function toggleMenu() {
+        menu.toggleClass('menu-burger-action');
+        if (menu.hasClass('menu-burger-action')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }
+    }
+}
+burgerMenu ('.menu-burger');

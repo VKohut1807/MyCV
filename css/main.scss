@@ -91,8 +91,9 @@ body{
 header{
     flex-grow: 0;
     width: 100%;
-    padding: 0.5em 0;
+    padding: 1em 1em;
     position: fixed;
+    background-color: $colGrey;
 
     .navbar{
         display: flex;
@@ -106,20 +107,105 @@ header{
             width: 10%;
         }
 
-        .menu-toggle{
-            font-size: 1.7em;
-            cursor: pointer;
-            display: flex;
-            justify-content: flex-end;
+        .menu-burger {
+            width: 6%;
             order: 2;
             display: none;
             margin: auto 0;
-            color: $colWhite;
+
+            .burger-button {
+                width: 9%;
+                transition: 0.4s;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .burger-lines,
+            .burger-lines::after,
+            .burger-lines::before {
+                position: absolute;
+                width: 2em;
+                top: 29px;
+                height: 0.33em;
+                background-color: $colOrange;
+                z-index: 10;
+            }
+
+            .burger-lines::before {
+                content: "";
+                top: -12px;
+            }
+
+            .burger-lines::after {
+                content: "";
+                top: 12px;
+            }
+
+            .menu-burger-navigate {
+                position: fixed;
+                display: flex;
+                flex-flow: column;
+                height: 100vh;
+                width: 100vw;
+                background-color: $colGrey;
+                overflow-y: auto;
+                top: -100%;
+                left: -100%;
+                transition: 0.5s;
+                z-index: 10;
+            }
+
+            .burger-link {
+                padding: 0.5em 1.5em;
+                color: $colWhite;
+            }
+
+            .burger-podLink {
+                padding: 0.5em 3.5em;
+                color: $colWhite;
+             }
+        }
+
+        .menu-burger-action{
+            .burger-button,
+            .burger-lines {
+                background-color: transparent;
+            }
+
+            .burger-lines::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            .burger-lines::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+
+            .menu-burger-navigate {
+                left: 0;
+                top: 2.7em;
+            }
+
+            .menu-burger-notScroll {
+                display: block;
+                background: $colWhite;
+            }
+        }
+
+        .menu-burger-notScroll {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
         }
 
         .about{
             line-height: 45px;
-            width: 80%;
+            width: 90%;
             display: flex;
             justify-content: center;
 
@@ -218,12 +304,6 @@ header{
     }
 }
 
-.fixed{
-    z-index: 4000;
-    background-color: $colGrey;
-    opacity: .8;
-}
-
 #main{
     flex-grow: 1;
 
@@ -271,9 +351,11 @@ header{
             .technologie-group{
                 flex-wrap: nowrap;
                 width: 100%;
+                z-index: -1;
+
 
                 .technologie-figure{
-                    background: $colWhite;
+                    background-color: $colWhite;
                     border: 2px solid $colOrange;
                     border-radius: 1em;
                     width: 115px;
@@ -402,6 +484,7 @@ footer{
     width: 100%;
     background-color: $colGrey;
     color: $colWhite;
+    z-index: -1;
 
     .foot-block{
         display: flex;
@@ -480,9 +563,8 @@ footer{
         img{
             vertical-align: middle;
             margin-right: 0.5em;
-            color: $colWhite;
             filter: invert(100%);
-            -webkit-filter:invert(100%); 
+            -webkit-filter:invert(100%);
             max-width: 1.5em;
         }
     }
@@ -501,6 +583,7 @@ footer{
         }
 
         header{
+            width: 96%;
         
             .navbar{
                 display: flex;
@@ -517,7 +600,7 @@ footer{
                     display: none;
                 }
 
-                .menu-toggle{
+                .menu-burger{
                     display: block;
                 }
 
@@ -720,7 +803,7 @@ footer{
                     display: none;
                 }
 
-                .menu-toggle{
+                .menu-burger{
                     display: block;
                 }
 
@@ -918,7 +1001,7 @@ footer{
                     display: none;
                 }
 
-                .menu-toggle{
+                .menu-burger{
                     display: block;
                 }
 
@@ -977,6 +1060,18 @@ footer{
 
             h3{
                 font-size: 230%;
+            }
+
+            #top{
+
+                h1{
+                    padding-top: 1.5em;
+                    font-size: 4em;
+                }
+
+                h5{
+                    font-size: 2em;
+                }
             }
 
             #skills{
@@ -1107,7 +1202,7 @@ footer{
                     display: none;
                 }
 
-                .menu-toggle{
+                .menu-burger{
                     display: block;
                 }
 
@@ -1158,6 +1253,18 @@ footer{
 
             h3{
                 font-size: 260%;
+            }
+
+            #top{
+
+                h1{
+                    padding-top: 1.5em;
+                    font-size: 4em;
+                }
+
+                h5{
+                    font-size: 2em;
+                }
             }
 
             #skills{
@@ -1259,6 +1366,18 @@ footer{
 
             h3{
                 font-size: 260%;
+            }
+
+            #top{
+
+                h1{
+                    padding-top: 1.5em;
+                    font-size: 4em;
+                }
+
+                h5{
+                    font-size: 2em;
+                }
             }
 
             #skills{
