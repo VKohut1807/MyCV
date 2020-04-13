@@ -1,4 +1,4 @@
-function slowScroll(id){
+function slowScroll(id) {
     $('html, body').animate({
         scrollTop: $(id).offset().top
     }, 500);
@@ -8,23 +8,23 @@ function focusInput() {
     document.getElementById("name").focus();
 }
 
-$("#send").on("click", function(){
+$("#send").on("click", function () {
     var name = $("#name").val().trim();
     var mail = $("#mail").val().trim();
     var msg = $("#msg").val().trim();
 
-    if(name == ""){
+    if (name == "") {
         $("#result_form").text("Podaj imię");
         return false;
-    }else if(mail == ""){
+    } else if (mail == "") {
         $("#result_form").text("Podaj e-mail");
         return false;
-    }else if(msg == "" || msg.length > 360){
-        $("#result_form").text("Wpisz krótką wiadomość (do 360znaków)");
+    } else if (msg == "" || msg.length > 360) {
+        $("#result_form").text("Wpisz krótką wiadomość");
         return false;
     }
 
-    $("#result_form").text("Wiadomość została wysłana");
+    $("#result_form").text(`Wiadomość wysłana`).addClass("color-special");
 
     $.ajax({
         url: 'code/send.php',
@@ -32,15 +32,21 @@ $("#send").on("click", function(){
         cache: false,
         data: {'name': name, 'mail': mail, 'msg': msg},
         dataType: "html",
-        beforeSend: function(){$("#send").prop("disabled", true)},
-        success: function(data){
-            if(!data)
-                alert("pomylky")
-            else
-                $("#ajax_form").trigger("reset");
+        beforeSend: function () {
+            $("#send").prop("disabled", true)
+        },
+        success:
+            function () {
+                $("#send").prop("disabled", false)
+            }
+        // function(){
+        // if(!data)
+        //     alert("pomylky")
+        // else
+        //     $("#ajax_form").trigger("reset");
 
-            $("#send").prop("disabled", false);
-        }
+        // $("#send").prop("disabled", false);
+        // }
     });
 });
 
@@ -68,4 +74,5 @@ function burgerMenu(selector) {
         }
     }
 }
-burgerMenu ('.menu-burger');
+
+burgerMenu('.menu-burger');
