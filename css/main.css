@@ -26,9 +26,21 @@ body {
   body .logo-border {
     border-bottom: 1px solid #FF9800;
     border-radius: 50%; }
-
-.color-special {
-  color: #FF9800; }
+  body .color-special {
+    color: #FF9800; }
+  body .neon-button {
+    background: none;
+    padding: 0.5em 1em;
+    color: #fff;
+    transition: .5s;
+    border: 1px solid #fff;
+    border-radius: .25em;
+    cursor: pointer; }
+  body .neon-button:hover {
+    background: #FF9800;
+    color: #fff;
+    border-color: #FF9800;
+    box-shadow: 0 0 1em #FF9800, 0 0 2em #FF9800, 0 0 5em #FF9800, 0 0 10em #FF9800; }
 
 .let-spacing-1 {
   letter-spacing: 0.1em; }
@@ -247,17 +259,6 @@ header {
     #main #top h1, #main #top h5 {
       line-height: normal;
       color: #fff; }
-    #main #top .neon-button {
-      background: none;
-      padding: 0.5em 1em;
-      color: #fff;
-      transition: .5s;
-      border: 1px solid #FF9800;
-      border-radius: .25em; }
-    #main #top .neon-button:hover {
-      background: #FF9800;
-      color: #fff;
-      box-shadow: 0 0 1em #FF9800, 0 0 2em #FF9800, 0 0 5em #FF9800, 0 0 10em #FF9800; }
   #main #skills {
     width: 100%;
     display: flex;
@@ -271,7 +272,8 @@ header {
         z-index: -1; }
         #main #skills .technologie .technologie-group .technologie-figure {
           background-color: #fff;
-          border: 2px solid #FF9800;
+          border: 0.5px solid #FF9800;
+          padding: 0.5em;
           border-radius: 1em;
           width: 115px;
           height: 115px;
@@ -283,7 +285,7 @@ header {
             -moz-transform: scale(-1, 1);
             -webkit-transform: scale(-1, 1); }
           #main #skills .technologie .technologie-group .technologie-figure img {
-            width: 90px;
+            width: 75px;
             margin: 5px 0 5px 5px; }
           #main #skills .technologie .technologie-group .technologie-figure .technologie-text {
             -moz-transform: rotate(180deg);
@@ -374,20 +376,9 @@ footer {
         footer .foot-block .foot-element ul > li textarea {
           resize: vertical;
           height: 5em; }
-        footer .foot-block .foot-element ul > li .down-button {
-          width: 45%;
-          border: 3px solid #00CC00;
-          height: 40px;
-          padding: 0;
-          border-radius: .25em; }
-          footer .foot-block .foot-element ul > li .down-button img {
-            vertical-align: middle; }
-        footer .foot-block .foot-element ul > li .down-button:hover {
-          background: #00CC00; }
-        footer .foot-block .foot-element ul > li .down-button:last-child {
-          border: 3px solid #FF0000; }
-        footer .foot-block .foot-element ul > li .down-button:last-child:hover {
-          background: #FF0000; }
+        footer .foot-block .foot-element ul > li .hidden-button {
+          width: 50%;
+          margin: auto; }
       footer .foot-block .foot-element li > input, footer .foot-block .foot-element textarea {
         width: 100%;
         min-height: 30px;
@@ -403,9 +394,8 @@ footer {
     footer a img {
       vertical-align: middle;
       margin-right: 0.5em;
-      filter: invert(100%);
-      -webkit-filter: invert(100%);
-      max-width: 1.5em; }
+      max-width: 1.5em;
+      color: #fff; }
 
 @media only screen and (max-device-width: 360px) {
   body .wrap-1 {
@@ -467,7 +457,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 2px solid #FF9800;
+        border: 0.5px solid #FF9800;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -563,7 +553,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 2px solid #FF9800;
+        border: 0.5px solid #FF9800;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -656,7 +646,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 2px solid #FF9800;
+        border: 0.5px solid #FF9800;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -749,7 +739,7 @@ footer {
       flex-wrap: wrap;
       margin: 1em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 2px solid #FF9800;
+        border: 0.5px solid #FF9800;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -807,7 +797,7 @@ footer {
       flex-wrap: wrap;
       margin: 1em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 2px solid #FF9800;
+        border: 0.5px solid #FF9800;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
