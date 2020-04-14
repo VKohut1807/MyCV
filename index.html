@@ -10,35 +10,37 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="code/js.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <div class="wrap-1 navbar">
         <div class="logo font-weight-1" onclick="slowScroll('#top')"><span class="logo-border">vKoHuT</span></div>
-        <div class="about">
-                <span class="dropdown-parent"><span onclick="slowScroll('#skills')"><span class="triangle-right"></span><span
-                        class="triangle-down"></span>Umiejętności</span>
-                    <div class="dropdown-child">
-                        <a onclick="slowScroll('#technologies')">Technologie</a>
-                        <a onclick="slowScroll('#languages')">Języki</a>
-                        <a onclick="slowScroll('#soft-skills')">Umiejętności miękie</a>
-                    </div>
-                </span>
-            <a onclick="slowScroll('#experience')">Doswiadczenie</a>
-            <a onclick="slowScroll('#study')">Edukacja</a>
-            <a onclick="slowScroll('#myContact')">Kontakt</a>
-        </div>
+        <nav class="about">
+            <ul class="topmenu uppercase font-size-5 let-spacing-1">
+                <li><a onclick="slowScroll('#skills')" class="down">Umiejętności</a>
+                    <ul class="submenu font-size-4">
+                        <li><a onclick="slowScroll('#technologies')">Technologie</a></li>
+                        <li><a onclick="slowScroll('#languages')">Języki</a></li>
+                        <li><a onclick="slowScroll('#soft-skills')">Umiejętności miękie</a></li>
+                    </ul>
+                </li>
+                <li><a onclick="slowScroll('#experience')">Doswiadczenie</a></li>
+                <li><a onclick="slowScroll('#study')">Edukacja</a></li>
+                <li><a onclick="slowScroll('#myContact')">Kontakt</a></li>
+            </ul>
+        </nav>
         <div class="menu-burger">
             <a href="#" class="burger-button">
                 <span class="burger-lines"></span>
             </a>
             <nav class="menu-burger-navigate font-size-5 font-weight-1 let-spacing-2 uppercase pad-top-3 pad-bot-4">
                 <a class="burger-link" onclick="slowScroll('#skills')">Umiejętności</a>
-                <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#technologies')"
+                    <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#technologies')"
                    class="marg-left-1 font-size-4">Technologie</a>
-                <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#languages')"
+                    <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#languages')"
                    class="marg-left-1 font-size-4">Języki</a>
-                <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#soft-skills')"
+                    <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#soft-skills')"
                    class="marg-left-1 font-size-4">Umiejętności miękie</a>
                 <a class="burger-link" onclick="slowScroll('#experience')">Doswiadczenie</a>
                 <a class="burger-link" onclick="slowScroll('#study')">Edukacja</a>
@@ -56,6 +58,8 @@
 </header>
 
 <section id="main">
+<!--    <div class="clas1"><div class="arrow"></div></div>-->
+
     <section id="top">
         <div class="wrap-1">
             <div class="wrap-2">
@@ -283,15 +287,15 @@
             <div class="foot-element pad-top-2">
                 <h5 class="font-size-2 pad-bot-4">Navigate</h5>
                 <a onclick="slowScroll('#skills')">Umiejętności</a>
-                <a onclick="slowScroll('#technologies')" class="marg-left-1 font-size-4">Technologie</a>
-                <a onclick="slowScroll('#languages')" class="marg-left-1 font-size-4">Języki</a>
-                <a onclick="slowScroll('#soft-skills')" class="marg-left-1 font-size-4">Umiejętności miękie</a>
+                    <a onclick="slowScroll('#technologies')" class="marg-left-1 font-size-4">Technologie</a>
+                    <a onclick="slowScroll('#languages')" class="marg-left-1 font-size-4">Języki</a>
+                    <a onclick="slowScroll('#soft-skills')" class="marg-left-1 font-size-4">Umiejętności miękie</a>
                 <a onclick="slowScroll('#experience')">Doswiadczenie</a>
                 <a onclick="slowScroll('#study')">Edukacja</a>
             </div>
             <div id="myContact" class="foot-element pad-top-2">
                 <h5 class="font-size-2 pad-bot-4">Kontakt</h5>
-                <a href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
+                <a target="_blank" a href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
                         src="img/map.svg" alt="">Rzeszów</a>
                 <a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a>
                 <a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a>
@@ -319,7 +323,7 @@
                 </form>
             </div>
         </div>
-        <div class="elem-center pad-top-2">
+        <div class="elem-center pad-top-2 soc_links">
             <a href="https://github.com/VKohut1807"><img src="img/github.svg"></a><a
                 href="https://www.facebook.com/profile.php?id=100007297025732"><img src="img/facebook.svg"></a>
         </div>
