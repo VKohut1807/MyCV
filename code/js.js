@@ -44,7 +44,6 @@ $("#send").on("click", function () {
         //     alert("pomylky")
         // else
         //     $("#ajax_form").trigger("reset");
-
         // $("#send").prop("disabled", false);
         // }
     });
@@ -68,11 +67,12 @@ function burgerMenu(selector) {
     function toggleMenu() {
         menu.toggleClass('menu-burger-action');
         if (menu.hasClass('menu-burger-action')) {
-            $('body').css('overflow', 'hidden');
+            $("body").css('overflow', 'hidden');
+            $("header").css('opacity', '1');
         } else {
-            $('body').css('overflow', 'visible');
+            $("body").css('overflow', 'visible');
+            $("header").css('opacity', '0.8');
         }
     }
 }
-
 burgerMenu('.menu-burger');

@@ -7,8 +7,6 @@
 $colOrange : #FF9800;
 $colWhite : #fff;
 $colBlack : #000;
-$colRed: #FF0000;
-$colGreen: #00CC00;
 $colGrey: #2c2c2c;
 
 body, html{
@@ -17,7 +15,7 @@ body, html{
 }
 
 body{
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     line-height: 1.9em;
@@ -46,7 +44,9 @@ body{
         border-radius: 50%;
     }
 
-    .color-special{color: $colOrange;}
+    .color-special{
+        color: $colOrange;
+    }
 
     .neon-button{
         background: none;
@@ -64,10 +64,35 @@ body{
         border-color: $colOrange;
         box-shadow: 0 0 1em #FF9800,
         0 0 2em #FF9800,
-        0 0 5em #FF9800,
-        0 0 10em #FF9800;
+        0 0 4em #FF9800,
+        0 0 8em #FF9800;
     }
 }
+
+//.clas1{
+//    position: fixed;
+//    top: 50%;
+//    right: 0;
+//    width: 1em;
+//    height: 3em;
+//    background: #00CC00;
+//    z-index: 10;
+//    transition: 0.5s;
+//}
+//
+//.arrow{
+//    //align-items: center;
+//    //border: solid white;
+//    //border-width: 0 4px 4px 0;
+//    //display: inline-block;
+//    //padding: 0.5em;
+//    //transform: rotate(135deg);
+//    //-webkit-transform: rotate(135deg);
+//}
+//
+//.clas1:hover{
+//    width: 3em;
+//}
 
 .let-spacing-1{letter-spacing: 0.1em;}
 .let-spacing-2{letter-spacing: 0.18em;}
@@ -115,6 +140,7 @@ header{
     padding: 1em 1em;
     position: fixed;
     background-color: $colGrey;
+    opacity: 0.8;
 
     .navbar{
         display: flex;
@@ -166,12 +192,12 @@ header{
                 position: fixed;
                 display: flex;
                 flex-flow: column;
-                height: 100vh;
-                width: 100vw;
+                width: 100%;
                 background-color: $colGrey;
                 overflow-y: auto;
                 top: -100%;
                 left: -100%;
+                bottom: 0;
                 transition: 0.5s;
                 z-index: 10;
             }
@@ -225,75 +251,80 @@ header{
         }
 
         .about{
-            line-height: 45px;
-            width: 90%;
+            width: 80%;
             display: flex;
             justify-content: center;
 
-            .triangle-down::before{
-                content: "\25bf";
-                color: $colOrange;
-            }
+                .topmenu > li {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 2.5em;
+                }
 
-            .triangle-right::before{
-                content: "\25b9";
-                color: $colOrange;
-            }
+                .topmenu > li > a {
+                    cursor: pointer;
+                    position: relative;
+                    display: block;
+                    color: $colWhite;
+                }
 
-            .dropdown-parent, a{
-                color: $colOrange;
-                transition: 0.5s;
-            }
+                .topmenu > li > a:before {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    left: 50%;
+                    top: 100%;
+                    width: 0.5em;
+                    height: 0.5em;
+                    background: $colWhite;
+                    border-radius: 50%;
+                    transform: translate(-50%, 0.25em);
+                    opacity: 0;
+                    transition: .3s;
+                }
 
-            .dropdown-parent, a{
-                margin: 0 3em;
-            }
+                .submenu {
+                    position: absolute;
+                    cursor: pointer;
+                    text-transform: none;
+                    left: 50%;
+                    width: 10em;
+                    margin-top: 0.3em;
+                    background: $colBlack;
+                    border-radius: 0.25em;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translate(-50%, 1em);
+                    transition: .3s;
 
-            .dropdown-parent:hover, a:hover{
-                color: $colOrange;
-                transition: 0.5s;
-                font-size: 24px;
-            }
+                    a {
+                        transition: .2s linear;
+                        color: $colWhite;
+                        padding: 1em;
+                        display: block;
+                        color: $colWhite;
+                    }
 
-            .dropdown-parent a:hover{
-                transition: 0.5s;
-                border: none;
-            }
+                    a:hover {
+                        background: $colGrey;
+                        border-radius: 0.25em;
+                    }
+                }
 
-            .dropdown-child {
-                display: none;
-                position:absolute;
-                font-size: 14px;
+                .topmenu li:hover {
 
-                a {
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 0em;
-                    margin: 0 1.5em
+                    a:before {
+                        transform: translate(-50%, 0);
+                        opacity: 1;
+                    }
+
+                    .submenu {
+                        visibility: visible;
+                        transform: translate(-50%, 0);
+                        opacity: 0.8;
+                    }
                 }
             }
-
-            .dropdown-parent:hover .dropdown-child {
-                display: block;
-            }
-
-            .triangle-down{
-                display: none;
-            }
-
-            .dropdown-parent:hover .triangle-down {
-                display: inline;
-            }
-
-            .triangle-right{
-                display: inline;
-            }
-
-            .dropdown-parent:hover .triangle-right {
-                display: none;
-            }
-        }
-
         //.cv{
         //    width: 10%;
         //    display: flex;
@@ -503,6 +534,7 @@ footer{
                 color: $colOrange;
                 transition: 0.5s;
                 padding-left: 1em;
+                cursor: pointer;
             }
 
             ul{
@@ -531,7 +563,7 @@ footer{
                 min-height: 30px;
                 padding: .5em;
                 border: 3px solid $colWhite;
-                border-radius: 1em;
+                border-radius: 0.25em;
             }
 
             li > input:hover, textarea:hover{
@@ -551,6 +583,10 @@ footer{
             max-width: 1.5em;
             color: $colWhite;
         }
+    }
+
+    .soc_links{
+        filter: invert(1);
     }
 }
 
@@ -600,36 +636,6 @@ footer{
 
                     .menu-burger-navigate {
                         top: 3.7em;
-                    }
-                }
-
-                .about{
-                    width: 100%;
-                    margin: 0 auto;
-                    position: absolute;
-                    right: 0;
-                    top: 3.5em;
-                    font-size: 0.9em;
-
-                    .dropdown-parent, a{
-                        margin: 0 0.7em;
-                    }
-
-                    .dropdown-parent:hover, a:hover{
-                        font-size: 1.1em;
-
-                    }
-
-                    .dropdown-child {
-
-                        a{
-                            font-size: 0.9em;
-                            margin: 0 2.5em;
-                        }
-
-                        a:hover{
-                            font-size: 1em;
-                        }
                     }
                 }
             }
@@ -802,37 +808,6 @@ footer{
                 .about{
                     display: none;
                 }
-
-                .about{
-                    width: 100%;
-                    margin: 0 auto;
-                    position: absolute;
-                    right: 0;
-                    top: 3.5em;
-                    text-align: center;
-
-
-                    .dropdown-parent, a{
-                        margin: 0 0.5em;
-                    }
-
-                    .dropdown-parent:hover, a:hover{
-                        font-size: 1.1em;
-                    }
-
-                    .dropdown-child {
-
-                        a{
-                            font-size: 0.9em;
-                            margin: 0 6em;
-                            text-align: left;
-                        }
-
-                        a:hover{
-                            font-size: 1em;
-                        }
-                    }
-                }
             }
         }
 
@@ -995,37 +970,6 @@ footer{
 
                 .about{
                     display: none;
-                }
-
-                .about{
-                    width: 100%;
-                    margin: 0 auto;
-                    position: absolute;
-                    right: 0;
-                    top: 3.5em;
-                    text-align: center;
-
-                    .dropdown-parent, a{
-                        margin: 0 0.7em;
-                    }
-
-                    .dropdown-parent:hover, a:hover{
-                        font-size: 1.2em;
-                    }
-
-                    .dropdown-child {
-
-                        a{
-                            width: 100%;
-                            font-size: 0.9em;
-                            margin: 0 12em;
-                            text-align: left;
-                        }
-
-                        a:hover{
-                            font-size: 1em;
-                        }
-                    }
                 }
             }
         }
@@ -1197,30 +1141,6 @@ footer{
                 .about{
                     display: none;
                 }
-
-                .about{
-                    margin: 0 auto;
-                    position: absolute;
-                    top: 3.5em;
-                    text-align: center;
-
-                    .dropdown-parent, a{
-                        margin: 0 1em;
-                        font-size: 1.1em;
-                    }
-
-                    .dropdown-parent:hover, a:hover{
-                        font-size: 1.3em;
-                    }
-
-                    .dropdown-child {
-
-                        a {
-                            margin: 0 7em;
-                            text-align: left;
-                        }
-                    }
-                }
             }
         }
 
@@ -1321,25 +1241,6 @@ footer{
 
         .wrap-2 {
             width: 95%;
-        }
-
-        header{
-
-            .navbar{
-
-                .about{
-                    margin: 0 auto;
-
-                    .dropdown-parent, a{
-                        margin: 0 0.7em;
-                        font-size: 1.3em;
-                    }
-
-                    .dropdown-parent:hover, a:hover{
-                        font-size: 1.5em;
-                    }
-                }
-            }
         }
 
         #main{

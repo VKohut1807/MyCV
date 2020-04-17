@@ -3,7 +3,7 @@ $name = $_POST['name'];
 $mail = $_POST['mail'];
 $msg = $_POST['msg'];
 
-$to = "vasylkohut1991@gmail.com"; /* Адрес, куда отправляем письма*/
+$to = "vasylkohut1991@gmail.co"; /* Адрес, куда отправляем письма!!!!!!*/
 $subject = "Письмо с обратной связи"; /*Тема письма*/
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=utf-8\r\n";

@@ -8,7 +8,7 @@ body, html {
   height: 100%; }
 
 body {
-  font-family: 'Futura PT', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   line-height: 1.9em;
@@ -40,7 +40,7 @@ body {
     background: #FF9800;
     color: #fff;
     border-color: #FF9800;
-    box-shadow: 0 0 1em #FF9800, 0 0 2em #FF9800, 0 0 5em #FF9800, 0 0 10em #FF9800; }
+    box-shadow: 0 0 1em #FF9800, 0 0 2em #FF9800, 0 0 4em #FF9800, 0 0 8em #FF9800; }
 
 .let-spacing-1 {
   letter-spacing: 0.1em; }
@@ -128,7 +128,8 @@ header {
   width: 100%;
   padding: 1em 1em;
   position: fixed;
-  background-color: #2c2c2c; }
+  background-color: #2c2c2c;
+  opacity: 0.8; }
   header .navbar {
     display: flex;
     flex-direction: row; }
@@ -167,12 +168,12 @@ header {
         position: fixed;
         display: flex;
         flex-flow: column;
-        height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-color: #2c2c2c;
         overflow-y: auto;
         top: -100%;
         left: -100%;
+        bottom: 0;
         transition: 0.5s;
         z-index: 10; }
       header .navbar .menu-burger .burger-link {
@@ -205,47 +206,60 @@ header {
       height: 100vh;
       z-index: 5; }
     header .navbar .about {
-      line-height: 45px;
-      width: 90%;
+      width: 80%;
       display: flex;
       justify-content: center; }
-      header .navbar .about .triangle-down::before {
-        content: "\25bf";
-        color: #FF9800; }
-      header .navbar .about .triangle-right::before {
-        content: "\25b9";
-        color: #FF9800; }
-      header .navbar .about .dropdown-parent, header .navbar .about a {
-        color: #FF9800;
-        transition: 0.5s; }
-      header .navbar .about .dropdown-parent, header .navbar .about a {
-        margin: 0 3em; }
-      header .navbar .about .dropdown-parent:hover, header .navbar .about a:hover {
-        color: #FF9800;
-        transition: 0.5s;
-        font-size: 24px; }
-      header .navbar .about .dropdown-parent a:hover {
-        transition: 0.5s;
-        border: none; }
-      header .navbar .about .dropdown-child {
-        display: none;
+      header .navbar .about .topmenu > li {
+        display: inline-block;
+        position: relative;
+        margin: 0 2.5em; }
+      header .navbar .about .topmenu > li > a {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        color: #fff; }
+      header .navbar .about .topmenu > li > a:before {
+        content: "";
         position: absolute;
-        font-size: 14px; }
-        header .navbar .about .dropdown-child a {
-          display: flex;
-          flex-direction: column;
-          margin-left: 0em;
-          margin: 0 1.5em; }
-      header .navbar .about .dropdown-parent:hover .dropdown-child {
-        display: block; }
-      header .navbar .about .triangle-down {
-        display: none; }
-      header .navbar .about .dropdown-parent:hover .triangle-down {
-        display: inline; }
-      header .navbar .about .triangle-right {
-        display: inline; }
-      header .navbar .about .dropdown-parent:hover .triangle-right {
-        display: none; }
+        z-index: 1;
+        left: 50%;
+        top: 100%;
+        width: 0.5em;
+        height: 0.5em;
+        background: #fff;
+        border-radius: 50%;
+        transform: translate(-50%, 0.25em);
+        opacity: 0;
+        transition: .3s; }
+      header .navbar .about .submenu {
+        position: absolute;
+        cursor: pointer;
+        text-transform: none;
+        left: 50%;
+        width: 10em;
+        margin-top: 0.3em;
+        background: #000;
+        border-radius: 0.25em;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, 1em);
+        transition: .3s; }
+        header .navbar .about .submenu a {
+          transition: .2s linear;
+          color: #fff;
+          padding: 1em;
+          display: block;
+          color: #fff; }
+        header .navbar .about .submenu a:hover {
+          background: #2c2c2c;
+          border-radius: 0.25em; }
+      header .navbar .about .topmenu li:hover a:before {
+        transform: translate(-50%, 0);
+        opacity: 1; }
+      header .navbar .about .topmenu li:hover .submenu {
+        visibility: visible;
+        transform: translate(-50%, 0);
+        opacity: 0.8; }
 
 #main {
   flex-grow: 1; }
@@ -365,7 +379,8 @@ footer {
       footer .foot-block .foot-element a:hover {
         color: #FF9800;
         transition: 0.5s;
-        padding-left: 1em; }
+        padding-left: 1em;
+        cursor: pointer; }
       footer .foot-block .foot-element ul {
         display: flex;
         flex-direction: column; }
@@ -384,7 +399,7 @@ footer {
         min-height: 30px;
         padding: .5em;
         border: 3px solid #fff;
-        border-radius: 1em; }
+        border-radius: 0.25em; }
       footer .foot-block .foot-element li > input:hover, footer .foot-block .foot-element textarea:hover {
         border: 3px solid #FF9800;
         width: 100%; }
@@ -396,6 +411,8 @@ footer {
       margin-right: 0.5em;
       max-width: 1.5em;
       color: #fff; }
+  footer .soc_links {
+    filter: invert(1); }
 
 @media only screen and (max-device-width: 360px) {
   body .wrap-1 {
@@ -422,22 +439,6 @@ footer {
         display: block; }
       body header .navbar .menu-burger-action .menu-burger-navigate {
         top: 3.7em; }
-      body header .navbar .about {
-        width: 100%;
-        margin: 0 auto;
-        position: absolute;
-        right: 0;
-        top: 3.5em;
-        font-size: 0.9em; }
-        body header .navbar .about .dropdown-parent, body header .navbar .about a {
-          margin: 0 0.7em; }
-        body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-          font-size: 1.1em; }
-        body header .navbar .about .dropdown-child a {
-          font-size: 0.9em;
-          margin: 0 2.5em; }
-        body header .navbar .about .dropdown-child a:hover {
-          font-size: 1em; }
   body #main #top h1 {
     padding-top: 1.25em;
     font-size: 4em; }
@@ -518,23 +519,6 @@ footer {
       top: 3.7em; }
     body header .navbar .about {
       display: none; }
-    body header .navbar .about {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      right: 0;
-      top: 3.5em;
-      text-align: center; }
-      body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 0.5em; }
-      body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-        font-size: 1.1em; }
-      body header .navbar .about .dropdown-child a {
-        font-size: 0.9em;
-        margin: 0 6em;
-        text-align: left; }
-      body header .navbar .about .dropdown-child a:hover {
-        font-size: 1em; }
   body #main #top h1 {
     padding-top: 1.7em;
     font-size: 4em; }
@@ -610,24 +594,6 @@ footer {
       width: 88vw; }
     body header .navbar .about {
       display: none; }
-    body header .navbar .about {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      right: 0;
-      top: 3.5em;
-      text-align: center; }
-      body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 0.7em; }
-      body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-        font-size: 1.2em; }
-      body header .navbar .about .dropdown-child a {
-        width: 100%;
-        font-size: 0.9em;
-        margin: 0 12em;
-        text-align: left; }
-      body header .navbar .about .dropdown-child a:hover {
-        font-size: 1em; }
   body #main h3 {
     font-size: 230%; }
   body #main #top h1 {
@@ -708,19 +674,6 @@ footer {
       width: 90vw; }
     body header .navbar .about {
       display: none; }
-    body header .navbar .about {
-      margin: 0 auto;
-      position: absolute;
-      top: 3.5em;
-      text-align: center; }
-      body header .navbar .about .dropdown-parent, body header .navbar .about a {
-        margin: 0 1em;
-        font-size: 1.1em; }
-      body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-        font-size: 1.3em; }
-      body header .navbar .about .dropdown-child a {
-        margin: 0 7em;
-        text-align: left; }
   body #main h3 {
     font-size: 260%; }
   body #main #top h1 {
@@ -770,13 +723,6 @@ footer {
     width: 95%; }
   body .wrap-2 {
     width: 95%; }
-  body header .navbar .about {
-    margin: 0 auto; }
-    body header .navbar .about .dropdown-parent, body header .navbar .about a {
-      margin: 0 0.7em;
-      font-size: 1.3em; }
-    body header .navbar .about .dropdown-parent:hover, body header .navbar .about a:hover {
-      font-size: 1.5em; }
   body #main h3 {
     font-size: 260%; }
   body #main #top h1 {
