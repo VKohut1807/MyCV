@@ -24,10 +24,10 @@ body {
     width: 70%;
     margin: 0 auto; }
   body .logo-border {
-    border-bottom: 1px solid #FF9800;
+    border-bottom: 1px solid #067dd9;
     border-radius: 50%; }
   body .color-special {
-    color: #FF9800; }
+    color: #067dd9; }
   body .neon-button {
     background: none;
     padding: 0.5em 1em;
@@ -37,10 +37,10 @@ body {
     border-radius: .25em;
     cursor: pointer; }
   body .neon-button:hover {
-    background: #FF9800;
+    background: #067dd9;
     color: #fff;
-    border-color: #FF9800;
-    box-shadow: 0 0 1em #FF9800, 0 0 2em #FF9800, 0 0 4em #FF9800, 0 0 8em #FF9800; }
+    border-color: #067dd9;
+    box-shadow: 0 0 1em #067dd9, 0 0 2em #067dd9, 0 0 4em #067dd9, 0 0 8em #067dd9; }
 
 .let-spacing-1 {
   letter-spacing: 0.1em; }
@@ -126,7 +126,7 @@ body {
 header {
   flex-grow: 0;
   width: 100%;
-  padding: 1em 1em;
+  padding: 1em;
   position: fixed;
   background-color: #2c2c2c;
   opacity: 0.8; }
@@ -134,7 +134,7 @@ header {
     display: flex;
     flex-direction: row; }
     header .navbar .logo {
-      color: #FF9800;
+      color: #067dd9;
       cursor: pointer;
       font-size: 1.7em;
       margin: auto 0;
@@ -156,8 +156,9 @@ header {
         width: 2em;
         top: 29px;
         height: 0.33em;
-        background-color: #FF9800;
-        z-index: 10; }
+        background-color: #067dd9;
+        z-index: 10;
+        transition: 0.4s; }
       header .navbar .menu-burger .burger-lines::before {
         content: "";
         top: -12px; }
@@ -176,9 +177,15 @@ header {
         bottom: 0;
         transition: 0.5s;
         z-index: 10; }
-      header .navbar .menu-burger .burger-link {
+      header .navbar .menu-burger .burger-link, header .navbar .menu-burger .burger-link-lang {
         padding: 0.5em 1.5em;
         color: #fff; }
+      header .navbar .menu-burger .link-lang {
+        display: flex; }
+        header .navbar .menu-burger .link-lang .lang {
+          margin-right: 1em; }
+        header .navbar .menu-burger .link-lang .lang:hover {
+          color: #067dd9; }
       header .navbar .menu-burger .burger-podLink {
         padding: 0.5em 3.5em;
         color: #fff; }
@@ -206,13 +213,13 @@ header {
       height: 100vh;
       z-index: 5; }
     header .navbar .about {
-      width: 80%;
+      width: 89%;
       display: flex;
       justify-content: center; }
       header .navbar .about .topmenu > li {
         display: inline-block;
         position: relative;
-        margin: 0 2.5em; }
+        margin: 0 1em; }
       header .navbar .about .topmenu > li > a {
         cursor: pointer;
         position: relative;
@@ -248,8 +255,7 @@ header {
           transition: .2s linear;
           color: #fff;
           padding: 1em;
-          display: block;
-          color: #fff; }
+          display: block; }
         header .navbar .about .submenu a:hover {
           background: #2c2c2c;
           border-radius: 0.25em; }
@@ -286,7 +292,7 @@ header {
         z-index: -1; }
         #main #skills .technologie .technologie-group .technologie-figure {
           background-color: #fff;
-          border: 0.5px solid #FF9800;
+          border: 0.5px solid #067dd9;
           padding: 0.5em;
           border-radius: 1em;
           width: 115px;
@@ -324,7 +330,7 @@ header {
       padding-right: 1em; }
     #main #skills li:before {
       content: "\270e";
-      color: #FF9800;
+      color: #067dd9;
       margin-right: 0.25em; }
   #main #experience {
     color: #fff;
@@ -347,10 +353,10 @@ header {
             color: #fff;
             text-decoration: underline; }
           #main #experience .experience-group .experience-block li a:hover {
-            color: #FF9800; }
+            color: #067dd9; }
         #main #experience .experience-group .experience-block li::before {
           content: '\270e';
-          color: #FF9800;
+          color: #067dd9;
           margin-right: 0.25em; }
     #main #experience .line-left {
       border-radius: 47.5%;
@@ -377,7 +383,7 @@ footer {
       flex-direction: column;
       min-width: 33%; }
       footer .foot-block .foot-element a:hover {
-        color: #FF9800;
+        color: #067dd9;
         transition: 0.5s;
         padding-left: 1em;
         cursor: pointer; }
@@ -392,7 +398,6 @@ footer {
           resize: vertical;
           height: 5em; }
         footer .foot-block .foot-element ul > li .hidden-button {
-          width: 50%;
           margin: auto; }
       footer .foot-block .foot-element li > input, footer .foot-block .foot-element textarea {
         width: 100%;
@@ -401,7 +406,7 @@ footer {
         border: 3px solid #fff;
         border-radius: 0.25em; }
       footer .foot-block .foot-element li > input:hover, footer .foot-block .foot-element textarea:hover {
-        border: 3px solid #FF9800;
+        border: 3px solid #067dd9;
         width: 100%; }
   footer a {
     color: #fff;
@@ -458,7 +463,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 0.5px solid #FF9800;
+        border: 0.5px solid #067dd9;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -532,7 +537,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 0.5px solid #FF9800;
+        border: 0.5px solid #067dd9;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -607,7 +612,7 @@ footer {
       flex-wrap: wrap;
       margin: 0.5em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 0.5px solid #FF9800;
+        border: 0.5px solid #067dd9;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -687,7 +692,7 @@ footer {
       flex-wrap: wrap;
       margin: 1em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 0.5px solid #FF9800;
+        border: 0.5px solid #067dd9;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -718,6 +723,20 @@ footer {
     width: 95%; }
   body .wrap-2 {
     width: 95%; }
+  body header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    body header .navbar .logo {
+      display: flex;
+      align-content: flex-start; }
+    body header .navbar .menu-burger {
+      display: block; }
+    body header .navbar .menu-burger-action .menu-burger-navigate {
+      top: 4em;
+      width: 85vw; }
+    body header .navbar .about {
+      display: none; }
   body #main h3 {
     font-size: 260%; }
   body #main #top h1 {
@@ -738,7 +757,7 @@ footer {
       flex-wrap: wrap;
       margin: 1em auto; }
       body #main #skills .technologie .technologie-group .technologie-figure {
-        border: 0.5px solid #FF9800;
+        border: 0.5px solid #067dd9;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
@@ -762,7 +781,13 @@ footer {
     min-width: 33%; }
     body footer .foot-block .foot-element ul > li:last-child {
       padding-bottom: 0em; } }
-@media only screen and (min-device-width: 961px) {
+@media only screen and (min-device-width: 961px) and (max-device-width: 1109px) {
+  #main #skills h5 {
+    padding-top: 3.5em; } }
+@media only screen and (min-device-width: 1110px) {
+  header .navbar .about .topmenu > li {
+    margin: 0 1.5em; }
+
   #main #skills h5 {
     padding-top: 3.5em; } }
 

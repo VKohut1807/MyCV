@@ -4,7 +4,8 @@
     outline: none;
 }
 
-$colOrange : #FF9800;
+$colSpecial : #067dd9;
+//$colOrange : #FF9800;
 $colWhite : #fff;
 $colBlack : #000;
 $colGrey: #2c2c2c;
@@ -40,12 +41,12 @@ body{
     }
 
     .logo-border{
-        border-bottom: 1px solid $colOrange;
+        border-bottom: 1px solid $colSpecial;
         border-radius: 50%;
     }
 
     .color-special{
-        color: $colOrange;
+        color: $colSpecial;
     }
 
     .neon-button{
@@ -59,13 +60,13 @@ body{
     }
 
     .neon-button:hover{
-        background: #FF9800;
+        background: $colSpecial;
         color: $colWhite;
-        border-color: $colOrange;
-        box-shadow: 0 0 1em #FF9800,
-        0 0 2em #FF9800,
-        0 0 4em #FF9800,
-        0 0 8em #FF9800;
+        border-color: $colSpecial;
+        box-shadow: 0 0 1em $colSpecial,
+        0 0 2em $colSpecial,
+        0 0 4em $colSpecial,
+        0 0 8em $colSpecial;
     }
 }
 
@@ -137,7 +138,7 @@ body{
 header{
     flex-grow: 0;
     width: 100%;
-    padding: 1em 1em;
+    padding: 1em;
     position: fixed;
     background-color: $colGrey;
     opacity: 0.8;
@@ -147,7 +148,7 @@ header{
         flex-direction: row;
 
         .logo{
-            color: $colOrange;
+            color: $colSpecial;
             cursor: pointer;
             font-size: 1.7em;
             margin: auto 0;
@@ -174,8 +175,9 @@ header{
                 width: 2em;
                 top: 29px;
                 height: 0.33em;
-                background-color: $colOrange;
+                background-color: $colSpecial;
                 z-index: 10;
+                transition: 0.4s;
             }
 
             .burger-lines::before {
@@ -202,9 +204,21 @@ header{
                 z-index: 10;
             }
 
-            .burger-link {
+            .burger-link, .burger-link-lang {
                 padding: 0.5em 1.5em;
                 color: $colWhite;
+            }
+
+            .link-lang {
+                display: flex;
+
+                .lang {
+                    margin-right: 1em;
+                }
+
+                .lang:hover {
+                    color: $colSpecial;
+                }
             }
 
             .burger-podLink {
@@ -251,14 +265,14 @@ header{
         }
 
         .about{
-            width: 80%;
+            width: 89%;
             display: flex;
             justify-content: center;
 
                 .topmenu > li {
                     display: inline-block;
                     position: relative;
-                    margin: 0 2.5em;
+                    margin: 0 1em;
                 }
 
                 .topmenu > li > a {
@@ -302,7 +316,6 @@ header{
                         color: $colWhite;
                         padding: 1em;
                         display: block;
-                        color: $colWhite;
                     }
 
                     a:hover {
@@ -332,7 +345,7 @@ header{
         //
         //    a{
         //        padding: 0 0.5em;
-        //        border: 1px solid $colOrange;
+        //        border: 1px solid $colSpecial;
         //        border-radius: .25em;
         //        color: $colWhite;
         //        line-height: 45px;
@@ -345,7 +358,7 @@ header{
         //    }
         //
         //    a:hover{
-        //        background: $colOrange;
+        //        background: $colSpecial;
         //        color: $colBlack;
         //
         //        .downarrow::before{
@@ -390,7 +403,7 @@ header{
 
                 .technologie-figure{
                     background-color: $colWhite;
-                    border: 0.5px solid $colOrange;
+                    border: 0.5px solid $colSpecial;
                     padding: 0.5em;
                     border-radius: 1em;
                     width: 115px;
@@ -451,7 +464,7 @@ header{
 
         li:before{
             content: "\270e";
-            color: $colOrange;
+            color: $colSpecial;
             margin-right: 0.25em;
         }
     }
@@ -483,13 +496,13 @@ header{
                     }
 
                     a:hover{
-                        color: $colOrange;
+                        color: $colSpecial;
                     }
                 }
 
                 li::before {
                     content: '\270e';
-                    color: $colOrange;
+                    color: $colSpecial;
                     margin-right: 0.25em;
                 }
             }
@@ -531,7 +544,7 @@ footer{
             min-width: 33%;
 
             a:hover{
-                color: $colOrange;
+                color: $colSpecial;
                 transition: 0.5s;
                 padding-left: 1em;
                 cursor: pointer;
@@ -553,7 +566,6 @@ footer{
                 }
 
                 .hidden-button{
-                    width: 50%;
                     margin: auto;
                 }
             }
@@ -567,7 +579,7 @@ footer{
             }
 
             li > input:hover, textarea:hover{
-                border: 3px solid $colOrange;
+                border: 3px solid $colSpecial;
                 width: 100%;
             }
         }
@@ -675,7 +687,7 @@ footer{
                         margin: 0.5em auto;
 
                         .technologie-figure{
-                            border: 0.5px solid $colOrange;
+                            border: 0.5px solid $colSpecial;
                             border-radius: 1em;
                             display: flex;
                             flex-direction: column;
@@ -837,7 +849,7 @@ footer{
                         margin: 0.5em auto;
 
                         .technologie-figure{
-                            border: 0.5px solid $colOrange;
+                            border: 0.5px solid $colSpecial;
                             border-radius: 1em;
                             display: flex;
                             flex-direction: column;
@@ -1000,7 +1012,7 @@ footer{
                         margin: 0.5em auto;
 
                         .technologie-figure{
-                            border: 0.5px solid $colOrange;
+                            border: 0.5px solid $colSpecial;
                             border-radius: 1em;
                             display: flex;
                             flex-direction: column;
@@ -1170,7 +1182,7 @@ footer{
                         margin: 1em auto;
 
                         .technologie-figure{
-                            border: 0.5px solid $colOrange;
+                            border: 0.5px solid $colSpecial;
                             border-radius: 1em;
                             display: flex;
                             flex-direction: column;
@@ -1236,6 +1248,36 @@ footer{
             width: 95%;
         }
 
+        header{
+
+            .navbar{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .logo{
+                    display: flex;
+                    align-content: flex-start;
+                }
+
+                .menu-burger{
+                    display: block;
+                }
+
+                .menu-burger-action{
+
+                    .menu-burger-navigate {
+                        top: 4em;
+                        width: 85vw;
+                    }
+                }
+
+                .about{
+                    display: none;
+                }
+            }
+        }
+
         #main{
 
             h3{
@@ -1273,7 +1315,7 @@ footer{
                         margin: 1em auto;
 
                         .technologie-figure{
-                            border: 0.5px solid $colOrange;
+                            border: 0.5px solid $colSpecial;
                             border-radius: 1em;
                             display: flex;
                             flex-direction: column;
@@ -1323,7 +1365,32 @@ footer{
     }
 }
 
-@media only screen and (min-device-width : 961px){
+@media only screen and (min-device-width : 961px) and (max-device-width : 1109px){
+    #main{
+
+        #skills{
+
+            h5{
+                padding-top: 3.5em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 1110px){
+    header {
+
+        .navbar {
+
+            .about {
+
+                .topmenu > li {
+                    margin: 0 1.5em;
+                }
+            }
+        }
+    }
+
     #main{
 
         #skills{
