@@ -133,12 +133,17 @@ let dictionary = {
             }
         },
         "footer": {
-            "navigation": "Навігація",
+            "languages": "Мови",
             "contact": "Контакт",
             "contact_text": {
                 "location": "Жешів"
             },
-            "subscribe": "Зв'язатися зі мною"
+            "subscribe": "Зв'язатися зі мною",
+            "subscribe_text": {
+                "name": "Ім'я та прізвище: (обов'язково)",
+                "email": "Почта: (обов'язково)",
+                "message": "Повідомлення: (обов'язково)"
+            }
         }
     },
     "ru": {
@@ -195,12 +200,17 @@ let dictionary = {
             }
         },
         "footer": {
-            "navigation": "Навигация",
+            "languages": "Языки",
             "contact": "Контакт",
             "contact_text": {
                 "location": "Жешов"
             },
-            "subscribe": "Связаться со мной"
+            "subscribe": "Связаться со мной",
+            "subscribe_text": {
+                "name": "Имя и фамилия: (обязательно)",
+                "email": "Почта: (обязательно)",
+                "message": "Сообщение: (обязательно)"
+            }
         }
     },
     "pl": {
@@ -257,12 +267,17 @@ let dictionary = {
             }
         },
         "footer": {
-            "navigation": "Nawigacja",
+            "languages": "Języki",
             "contact": "Kontakt",
             "contact_text": {
                 "location": "Rzeszów"
             },
-            "subscribe": "Napisz do mnie"
+            "subscribe": "Napisz do mnie",
+            "subscribe_text": {
+                "name": "Imię oraz nazwisko: (wymagane)",
+                "email": "E-mail: (wymagane)",
+                "message": "Wiadomość: (wymagane)"
+            }
         }
     },
     "en": {
@@ -319,21 +334,20 @@ let dictionary = {
             },
         },
         "footer": {
-            "navigation": "Navigation",
+            "languages": "Languages",
             "contact": "Contact",
             "contact_text": {
                 "location": "Rzeszow"
             },
-            "subscribe": "Contact with me"
+            "subscribe": "Contact with me",
+            "subscribe_text": {
+                "name": "Name and surnames: (required)",
+                "email": "E-mail: (required)",
+                "message": "Message: (required)"
+            }
         }
     }
 };
-$("select.lang").change(function () {
-    let language = $(this).children("option:selected").val().toLowerCase();
-    if (dictionary.hasOwnProperty(language)) {
-        set_lang(dictionary[language]);
-    }
-});
 $(".lang").click(function() {
     let language = $(this).text().toLowerCase();
     if (dictionary.hasOwnProperty(language)) {
@@ -361,3 +375,14 @@ function parseSubObject(obj, str) {
     }
 }
 set_lang(dictionary.pl);
+
+let option_footer = document.querySelectorAll('.option-footer');
+option_footer[2].classList.add('color-special');
+let elect = option_footer[2];
+for( let i = 0; i < option_footer.length; i++ ){
+    option_footer[i].addEventListener('click', function(){
+        elect.classList.remove('color-special');
+        this.classList.add('color-special');
+        elect = this;
+    });
+}

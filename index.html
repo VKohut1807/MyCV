@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
     <script src="code/js.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <div class="wrap-1 navbar">
-        <div class="logo font-weight-1" onclick="slowScroll('#top')"><span class="logo-border">vKoHuT</span></div>
+        <div class="logo" onclick="slowScroll('#top')"><img src="img/logo.png" alt=""></div>
         <nav class="about">
             <ul class="topmenu uppercase font-size-5 let-spacing-1">
                 <li><a onclick="slowScroll('#skills')" data-translate="menu.skills">Umiejętności</a>
@@ -27,14 +26,6 @@
                 <li><a onclick="slowScroll('#experience')" data-translate="menu.experience">Doswiadczenie</a></li>
                 <li><a onclick="slowScroll('#study')" data-translate="menu.study">Edukacja</a></li>
                 <li><a onclick="slowScroll('#myContact')" data-translate="menu.myContact">Kontakt</a></li>
-                <li>
-                    <select class="lang">
-                        <option>UA</option>
-                        <option>RU</option>
-                        <option selected>PL</option>
-                        <option>EN</option>
-                    </select>
-                </li>
             </ul>
         </nav>
         <div class="menu-burger">
@@ -54,10 +45,10 @@
                 <a class="burger-link" onclick="slowScroll('#myContact')" data-translate="menu.myContact">Kontakt</a>
                 <div class="burger-link-lang">
                     <ul class="link-lang">
-                        <li class="lang flag-ua">ua</li>
-                        <li class="lang flag-ru">ru</li>
-                        <li class="lang flag-pl">pl</li>
-                        <li class="lang flag-usa">en</li>
+                        <li class="lang option">ua</li>
+                        <li class="lang option">ru</li>
+                        <li class="lang option">pl</li>
+                        <li class="lang option">en</li>
                     </ul>
                 </div>
             </nav>
@@ -79,7 +70,7 @@
         <div class="wrap-1">
             <div class="wrap-2">
                 <h1 class="pad-top-4 let-spacing-1 font-size-1 font-weight-1 uppercase">
-                    <span class="color-special">V</span><span>asyl<br>Kohut</span><span class="color-special">.</span>
+                    <span class="background-color-special">V</span><span>asyl<br>Kohut</span>
                 </h1>
                 <h5 class="pad-top-3 let-spacing-2 font-size-2 font-weight-2 uppercase pad-bot-1">front-end
                     developer</h5>
@@ -297,39 +288,44 @@
     <div class="wrap-1 font-size-5">
         <div class="foot-block">
             <div class="foot-element pad-top-2 let-spacing-3">
-                <h5 class="font-size-2 pad-bot-4" data-translate="footer.navigation">Nawigacja</h5>
-                <a onclick="slowScroll('#skills')" data-translate="menu.skills">Umiejętności</a>
-                    <a onclick="slowScroll('#technologies')" class="marg-left-1 font-size-4" data-translate="menu.technologies">Technologie</a>
-                    <a onclick="slowScroll('#languages')" class="marg-left-1 font-size-4" data-translate="menu.languages">Języki</a>
-                    <a onclick="slowScroll('#soft-skills')" class="marg-left-1 font-size-4" data-translate="menu.soft-skills">Umiejętności miękie</a>
-                <a onclick="slowScroll('#experience')" data-translate="menu.experience">Doswiadczenie</a>
-                <a onclick="slowScroll('#study')" data-translate="menu.study">Edukacja</a>
-            </div>
-            <div id="myContact" class="foot-element pad-top-2 let-spacing-3">
-                <h5 class="font-size-2 pad-bot-4" data-translate="footer.contact">Kontakt</h5>
-                <a target="_blank" href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
-                        src="img/map.svg" alt=""><span data-translate="footer.contact_text.location">Rzeszów</span></a>
-                <a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a>
-                <a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a>
+                <h5 class="font-size-2 pad-bot-4" data-translate="footer.languages">Languages</h5>
+                <ul class="uppercase">
+                    <li class="lang option-footer">ua</li>
+                    <li class="lang option-footer">ru</li>
+                    <li class="lang option-footer">pl</li>
+                    <li class="lang option-footer">en</li>
+                </ul>
             </div>
             <div class="foot-element pad-top-2 let-spacing-3">
+                <h5 class="font-size-2 pad-bot-4" data-translate="footer.contact">Kontakt</h5>
+                <ul>
+                    <li><a target="_blank" href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
+                            src="img/map.svg" alt=""><span data-translate="footer.contact_text.location">Rzeszów</span></a></li>
+                    <li><a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a></li>
+                    <li><a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a></li>
+                </ul>
+            </div>
+            <div id="myContact" class="foot-element pad-top-2 let-spacing-3">
                 <h5 class="font-size-2 pad-bot-4" data-translate="footer.subscribe">Subskrybuj</h5>
                 <form id="ajax_form">
                     <ul>
                         <li>
-                            <input class="text" type="text" id="name" name="name" placeholder = "Name:" maxlength="15">
+                            <label for="name" data-translate="footer.subscribe_text.name">Imię oraz nazwisko: (wymagane)</label>
+                            <input class="text" type="text" id="name" name="name" maxlength="15">
                         </li>
                         <li>
-                            <input class="text" type="email" id="mail" name="mail" placeholder="E-mail:" maxlength="40">
+                            <label for="mail" data-translate="footer.subscribe_text.email">E-mail: (wymagane)</label>
+                            <input class="text" type="email" id="mail" name="mail" maxlength="40">
                         </li>
                         <li>
-                            <textarea class="text" id="msg" name="msg" placeholder="Message:"></textarea>
+                            <label for="msg" data-translate="footer.subscribe_text.message">Wiadomość: (wymagane)</label>
+                            <textarea class="text" id="msg" name="msg"></textarea>
                         </li>
-                        <li class="elem-center">
+                        <li class="elem-send">
                             <button id="send" class="neon-button uppercase let-spacing-2 font-size-5" type="button" data-translate="button.send">
                                 Wyślij
                             </button>
-                            <div id="result_form" class="hidden-button"></div>
+                            <div id="result_form"></div>
                         </li>
                     </ul>
                 </form>
