@@ -119,8 +119,8 @@ let dictionary = {
                 "modules": "Опрацювання нових модулів та їх впровадження",
                 "position2": "Практикант",
                 "registration": "Створення API, чат з логуванням",
-                "client": "Клієнтська частина - ",
-                "server": "Серверна частина - ",
+                "client": "Клієнтська частина",
+                "server": "Серверна частина",
                 "programming": "Програмування в Angular8 та NodeJS",
                 "real": "Маніпулювання повідомленнями в реальному часі - додавання, редагування, усунення повідомлень",
                 "database": "Записування даних до MongoDB"
@@ -133,11 +133,11 @@ let dictionary = {
             }
         },
         "footer": {
-            "languages": "Мови",
             "contact": "Контакт",
             "contact_text": {
                 "location": "Жешів"
             },
+            "cv": "Резюме",
             "subscribe": "Зв'язатися зі мною",
             "subscribe_text": {
                 "name": "Ім'я та прізвище: (обов'язково)",
@@ -186,8 +186,8 @@ let dictionary = {
                 "modules": "Опрацювання нових модулів та їх впровадження",
                 "position2": "Практикант",
                 "registration": "Создание API, чат с регистрацией",
-                "client": "Клиентская часть - ",
-                "server": "Серверная часть - ",
+                "client": "Клиентская часть",
+                "server": "Серверная часть",
                 "programming": "Программирование в Angular8 и NodeJS",
                 "real": "Манипулирование сообщениями в реальном времени - добавление, редактирование, устранение сообщений",
                 "database": "Запись данных в MongoDB"
@@ -200,11 +200,11 @@ let dictionary = {
             }
         },
         "footer": {
-            "languages": "Языки",
             "contact": "Контакт",
             "contact_text": {
                 "location": "Жешов"
             },
+            "cv": "Резюме",
             "subscribe": "Связаться со мной",
             "subscribe_text": {
                 "name": "Имя и фамилия: (обязательно)",
@@ -246,15 +246,15 @@ let dictionary = {
             },
             "experience": {
                 "position1": "Praktykant / Stażysta",
-                "enterprise": "Tworzenie oprogramowania wspomagającego w zarządzaniu przedsiębiorstwem - ",
+                "enterprise": "Tworzenie oprogramowania wspomagającego w zarządzaniu platformą - ",
                 "angular8": "Programowanie pod Angular8",
                 "maintenance": "Obsługa systemu",
                 "modification": "Pomoc w zarządzaniu i modyfikacji treści",
                 "modules": "Opracowanie nowych modułów i ich wdrożenie",
                 "position2": "Praktykant",
                 "registration": "Tworzenie API, czat z logowaniem",
-                "client": "Część klienta - ",
-                "server": "Część serwera - ",
+                "client": "Część klienta",
+                "server": "Część serwera",
                 "programming": "Programowanie pod Angular8 oraz NodeJS",
                 "real": "Manipulacja wiadomościami w czasie rzeczywistym - dodawanie, redagowanie, usuwanie wiadomości",
                 "database": "Zapisywanie danych do MongoDB"
@@ -267,11 +267,11 @@ let dictionary = {
             }
         },
         "footer": {
-            "languages": "Języki",
             "contact": "Kontakt",
             "contact_text": {
                 "location": "Rzeszów"
             },
+            "cv": "Curriculum vitae",
             "subscribe": "Napisz do mnie",
             "subscribe_text": {
                 "name": "Imię oraz nazwisko: (wymagane)",
@@ -313,15 +313,15 @@ let dictionary = {
             },
             "experience": {
                 "position1": "Apprentice / Intern",
-                "enterprise": "Creation of software helping in a management an enterprise - ",
+                "enterprise": "Creating software that helps in managing the platform - ",
                 "angular8": "Programming in Angular8",
                 "maintenance": "Maintenance of the system",
                 "modification": "Help in a management and modification of maintenance",
                 "modules": "Development of the new modules and their introduction",
                 "position2": "Apprentice",
                 "registration": "Creation of API, chat with registration",
-                "client": "Part of client - ",
-                "server": "Part of server - ",
+                "client": "Part of client",
+                "server": "Part of server",
                 "programming": "Programming in Angular8 also NodeJS",
                 "real": "Manipulation by news during real - giving, editing, removing of report",
                 "database": "Writing to the MongoDB"
@@ -334,11 +334,11 @@ let dictionary = {
             },
         },
         "footer": {
-            "languages": "Languages",
             "contact": "Contact",
             "contact_text": {
                 "location": "Rzeszow"
             },
+            "cv": "Resume",
             "subscribe": "Contact with me",
             "subscribe_text": {
                 "name": "Name and surnames: (required)",
@@ -376,11 +376,11 @@ function parseSubObject(obj, str) {
 }
 set_lang(dictionary.pl);
 
-let option_footer = document.querySelectorAll('.option-footer');
-option_footer[2].classList.add('color-special');
-let elect = option_footer[2];
-for( let i = 0; i < option_footer.length; i++ ){
-    option_footer[i].addEventListener('click', function(){
+let option = document.querySelectorAll('.option');
+option[2].classList.add('color-special');
+let elect = option[2];
+for( let i = 0; i < option.length; i++ ){
+    option[i].addEventListener('click', function(){
         elect.classList.remove('color-special');
         this.classList.add('color-special');
         elect = this;

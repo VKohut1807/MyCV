@@ -16,16 +16,22 @@
         <div class="logo" onclick="slowScroll('#top')"><img src="img/logo.png" alt=""></div>
         <nav class="about">
             <ul class="topmenu uppercase font-size-5 let-spacing-1">
-                <li><a onclick="slowScroll('#skills')" data-translate="menu.skills">Umiejętności</a>
+                <li><a onclick="slowScroll('#skills')" data-translate="menu.skills"></a>
                     <ul class="submenu font-size-4">
-                        <li><a onclick="slowScroll('#technologies')" data-translate="menu.technologies">Technologie</a></li>
-                        <li><a onclick="slowScroll('#languages')" data-translate="menu.languages">Języki</a></li>
-                        <li><a onclick="slowScroll('#soft-skills')" data-translate="menu.soft-skills">Umiejętności miękie</a></li>
+                        <li><a onclick="slowScroll('#technologies')" data-translate="menu.technologies"></a></li>
+                        <li><a onclick="slowScroll('#languages')" data-translate="menu.languages"></a></li>
+                        <li><a onclick="slowScroll('#soft-skills')" data-translate="menu.soft-skills"></a></li>
                     </ul>
                 </li>
-                <li><a onclick="slowScroll('#experience')" data-translate="menu.experience">Doswiadczenie</a></li>
-                <li><a onclick="slowScroll('#study')" data-translate="menu.study">Edukacja</a></li>
-                <li><a onclick="slowScroll('#myContact')" data-translate="menu.myContact">Kontakt</a></li>
+                <li><a onclick="slowScroll('#experience')" data-translate="menu.experience"></a></li>
+                <li><a onclick="slowScroll('#study')" data-translate="menu.study"></a></li>
+                <li><a onclick="slowScroll('#myContact')" data-translate="menu.myContact"></a></li>
+            </ul>
+            <ul class="uppercase header-lang">
+                <li class="lang lang-ua"><span class="display-none">ua</span></li>
+                <li class="lang lang-ru"><span class="display-none">ru</span></li>
+                <li class="lang lang-pl"><span class="display-none">pl</span></li>
+                <li class="lang lang-en"><span class="display-none">en</span></li>
             </ul>
         </nav>
         <div class="menu-burger">
@@ -33,16 +39,16 @@
                 <span class="burger-lines"></span>
             </a>
             <nav class="menu-burger-navigate font-size-5 font-weight-1 let-spacing-2 uppercase pad-top-3 pad-bot-4">
-                <a class="burger-link" onclick="slowScroll('#skills')" data-translate="menu.skills">Umiejętności</a>
+                <a class="burger-link" onclick="slowScroll('#skills')" data-translate="menu.skills"></a>
                     <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#technologies')"
-                   class="marg-left-1 font-size-4" data-translate="menu.technologies">Technologie</a>
+                   class="marg-left-1 font-size-4" data-translate="menu.technologies"></a>
                     <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#languages')"
-                   class="marg-left-1 font-size-4" data-translate="menu.languages">Języki</a>
+                   class="marg-left-1 font-size-4" data-translate="menu.languages"></a>
                     <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#soft-skills')"
-                   class="marg-left-1 font-size-4" data-translate="menu.soft-skills">Umiejętności miękie</a>
-                <a class="burger-link" onclick="slowScroll('#experience')" data-translate="menu.experience">Doswiadczenie</a>
-                <a class="burger-link" onclick="slowScroll('#study')" data-translate="menu.study">Edukacja</a>
-                <a class="burger-link" onclick="slowScroll('#myContact')" data-translate="menu.myContact">Kontakt</a>
+                   class="marg-left-1 font-size-4" data-translate="menu.soft-skills"></a>
+                <a class="burger-link" onclick="slowScroll('#experience')" data-translate="menu.experience"></a>
+                <a class="burger-link" onclick="slowScroll('#study')" data-translate="menu.study"></a>
+                <a class="burger-link" onclick="slowScroll('#myContact')" data-translate="menu.myContact"></a>
                 <div class="burger-link-lang">
                     <ul class="link-lang">
                         <li class="lang option">ua</li>
@@ -54,18 +60,10 @@
             </nav>
             <div class="menu-burger-notScroll"></div>
         </div>
-        <!-- <a href="#">Portfolio-okrema stor</a> -->
-        <!--            <div class="cv">-->
-        <!--                <a download href="download/VasylKohutCV.pdf"><span class="downarrow"> </span>CV</a>-->
-        <!--            </div>-->
-        <!--            1 poczystyty scss-->
-        <!--            2 dorobyty menu po prawij storoni z pereklucznniam mow i okremo portfolio moze karuselju-->
     </div>
 </header>
 
 <section id="main">
-<!--    <div class="clas1"><div class="arrow"></div></div>-->
-
     <section id="top">
         <div class="wrap-1">
             <div class="wrap-2">
@@ -74,9 +72,7 @@
                 </h1>
                 <h5 class="pad-top-3 let-spacing-2 font-size-2 font-weight-2 uppercase pad-bot-1">front-end
                     developer</h5>
-                <button class="let-spacing-2 font-size-2 uppercase neon-button" type="button" onclick="focusInput()" data-translate="button.contact">
-                    Kontakt
-                </button>
+                <button class="let-spacing-2 font-size-2 uppercase neon-button" type="button" onclick="focusInput()" data-translate="button.contact"></button>
             </div>
         </div>
     </section>
@@ -84,10 +80,9 @@
     <section id="skills">
         <div class="wrap-1 pad-top-1 pad-bot-2">
             <div class="wrap-2">
-                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase" data-translate="menu.skills">Umiejętności</h3>
+                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase" data-translate="menu.skills"></h3>
                 <div id="technologies">
-                    <h5 class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase pad-bot-3" data-translate="menu.technologies">
-                        Technologie:</h5>
+                    <h5 class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase pad-bot-3" data-translate="menu.technologies"></h5>
                     <div class="technologie elem-center font-size-4 uppercase font-weight-1 let-spacing-3 pad-top-2 pad-bot-3">
                         <div class="technologie-group">
                             <div class="technologie-figure">
@@ -161,39 +156,37 @@
                         </div>
                     </div>
                 </div>
-                <h5 id="languages" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.languages">
-                    Języki:</h5>
+                <h5 id="languages" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.languages"></h5>
                 <div class="elem-center font-size-4 font-weight-2 let-spacing-3 pad-top-2 pad-bot-3">
                     <div class="language-group">
                         <figure title="Ojczysty">
                             <img src="img/ukr-flag.png">
-                            <figcaption data-translate="main.languages.ukrainian">Ukraiński</figcaption>
+                            <figcaption data-translate="main.languages.ukrainian"></figcaption>
                         </figure>
                         <figure title="Znajomość języka na poziomie zaawansowany">
                             <img src="img/rus-flag.png">
-                            <figcaption data-translate="main.languages.russian">Rosyjski</figcaption>
+                            <figcaption data-translate="main.languages.russian"></figcaption>
                         </figure>
                         <figure title="Znajomość języka na poziomie zaawansowany">
                             <img src="img/pl-flag.png">
-                            <figcaption data-translate="main.languages.polish">Polski</figcaption>
+                            <figcaption data-translate="main.languages.polish"></figcaption>
                         </figure>
                         <figure title="Znajomość języka na poziomie umożliwiającym czytanie dokumentacji">
                             <img src="img/usa-flag.png">
-                            <figcaption data-translate="main.languages.english">Angielski</figcaption>
+                            <figcaption data-translate="main.languages.english"></figcaption>
                         </figure>
                     </div>
                 </div>
-                <h5 id="soft-skills" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.soft-skills">
-                    Umiejętności miękie:</h5>
+                <h5 id="soft-skills" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.soft-skills"></h5>
                 <ul class="pad-left-1 uppercase font-size-4 font-weight-2 let-spacing-3 pad-top-2 pad-bot-3 float-left">
-                    <li data-translate="main.soft_skills.analytics">Analityka</li>
-                    <li data-translate="main.soft_skills.diligence">Staranność</li>
-                    <li data-translate="main.soft_skills.efficiency">Pracowitość</li>
-                    <li data-translate="main.soft_skills.precision">Precyzja</li>
-                    <li data-translate="main.soft_skills.commitment">Zaangażowanie w pracy</li>
-                    <li data-translate="main.soft_skills.ability">Umiejętność pracy w zespole</li>
-                    <li data-translate="main.soft_skills.openness">Otwartość na nowe wyzwania</li>
-                    <li data-translate="main.soft_skills.stress">Zdolność do harmonijnej pracy w warunkach stresu</li>
+                    <li data-translate="main.soft_skills.analytics"></li>
+                    <li data-translate="main.soft_skills.diligence"></li>
+                    <li data-translate="main.soft_skills.efficiency"></li>
+                    <li data-translate="main.soft_skills.precision"></li>
+                    <li data-translate="main.soft_skills.commitment"></li>
+                    <li data-translate="main.soft_skills.ability"></li>
+                    <li data-translate="main.soft_skills.openness"></li>
+                    <li data-translate="main.soft_skills.stress"></li>
                 </ul>
             </div>
         </div>
@@ -202,7 +195,7 @@
     <section id="experience">
         <div class="wrap-1 pad-top-1 pad-bot-2">
             <div class="wrap-2">
-                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase pad-bot-3" data-translate="menu.experience">Doswiadczenie</h3>
+                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase pad-bot-3" data-translate="menu.experience"></h3>
                 <div class="font-size-4 font-weight-2 let-spacing-3 pad-top-2">
                     <div class="experience-group block-right line-left">
                         <div class="experience-block pad-bot-4">
@@ -212,14 +205,14 @@
                             <div class="font-weight-2 font-size-2 pad-bot-5">
                                 Connected Digital Polska
                             </div>
-                            <div class="let-spacing-3 font-size-5 font-weight-1 pad-bot-4" data-translate="main.experience.position1">Praktykant / Stażysta</div>
+                            <div class="let-spacing-3 font-size-5 font-weight-1 pad-bot-4" data-translate="main.experience.position1"></div>
                             <ul class="font-size-5 font-weight-2">
-                                <li><span data-translate="main.experience.enterprise">Tworzenie oprogramowania wspomagającego w zarządzaniu przedsiębiorstwem - </span><a target="_blank"
-                                        href="https://processbliss.com/">Process Bliss</a></li>
-                                <li data-translate="main.experience.angular8">Programowanie pod Angular8</li>
-                                <li data-translate="main.experience.maintenance">Obsługa systemu</li>
-                                <li data-translate="main.experience.modification">Pomoc w zarządzaniu i modyfikacji treści</li>
-                                <li data-translate="main.experience.modules">Opracowanie nowych modułów i ich wdrożenie</li>
+                                <li><span data-translate="main.experience.enterprise"></span>
+                                    <a target="_blank" href="https://processbliss.com/">Process Bliss</a></li>
+                                <li data-translate="main.experience.angular8"></li>
+                                <li data-translate="main.experience.maintenance"></li>
+                                <li data-translate="main.experience.modification"></li>
+                                <li data-translate="main.experience.modules"></li>
                             </ul>
                         </div>
                     </div>
@@ -231,16 +224,14 @@
                             <div class="font-weight-2 font-size-2 pad-bot-5">
                                 Connected Digital Polska
                             </div>
-                            <div class="let-spacing-3 font-size-5 font-weight-1 pad-bot-4" data-translate="main.experience.position2">Praktykant</div>
+                            <div class="let-spacing-3 font-size-5 font-weight-1 pad-bot-4" data-translate="main.experience.position2"></div>
                             <ul class="font-size-5 font-weight-2">
-                                <li data-translate="main.experience.registration">Tworzenie aplikacji, czat z logowaniem</li>
-                                <li><span data-translate="main.experience.client">Część klienta - </span><a target="_blank" href="https://github.com/VKohut1807/FrontApi">Front-end</a></li>
-                                <li><span data-translate="main.experience.server">Część serwera - </span><a target="_blank" href="https://github.com/VKohut1807/BackApi">Back-end</a></li>
-                                <li data-translate="main.experience.programming">Programowanie pod Angular8 oraz NodeJS</li>
-                                <li data-translate="main.experience.real">Manipulacja wiadomościami w czasie rzeczywistym - dodawanie, redagowanie, usuwanie
-                                    wiadomości
-                                </li>
-                                <li data-translate="main.experience.database">Zapisywanie danych do bazy Mongo</li>
+                                <li data-translate="main.experience.registration"></li>
+                                <li><a target="_blank" href="https://github.com/VKohut1807/FrontApi"><span data-translate="main.experience.client"></span></a></li>
+                                <li><a target="_blank" href="https://github.com/VKohut1807/BackApi"><span data-translate="main.experience.server"></span></a></li>
+                                <li data-translate="main.experience.programming"></li>
+                                <li data-translate="main.experience.real"></li>
+                                <li data-translate="main.experience.database"></li>
                             </ul>
                         </div>
                     </div>
@@ -265,18 +256,18 @@
     <section id="study">
         <div class="wrap-1 pad-top-1 pad-bot-2">
             <div class="wrap-2">
-                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase pad-bot-3" data-translate="menu.study">Edukacja</h3>
+                <h3 class="let-spacing-1 font-size-3 font-weight-1 elem-center uppercase pad-bot-3" data-translate="menu.study"></h3>
                 <div class="font-size-4 font-weight-2 let-spacing-3">
                     <div class="let-spacing-3 color-special font-size-5 font-weight-2 pad-bot-4">
                         2012-2015
                     </div>
                     <div class="font-weight-2 font-size-2 pad-bot-5">
-                        <div data-translate="main.study.university">Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie</div>
-                        <div data-translate="main.study.studies">(studia inżynierskie)</div>
+                        <div data-translate="main.study.university"></div>
+                        <div data-translate="main.study.studies"></div>
                     </div>
                     <div class="let-spacing-3 font-size-5 font-weight-1">
-                        <div data-translate="main.study.direction">kierunek: Logistyka,</div>
-                        <div data-translate="main.study.major">Transport & Spedycja</div>
+                        <div data-translate="main.study.direction"></div>
+                        <div data-translate="main.study.major"></div>
                     </div>
                 </div>
             </div>
@@ -288,43 +279,43 @@
     <div class="wrap-1 font-size-5">
         <div class="foot-block">
             <div class="foot-element pad-top-2 let-spacing-3">
-                <h5 class="font-size-2 pad-bot-4" data-translate="footer.languages">Languages</h5>
-                <ul class="uppercase">
-                    <li class="lang option-footer">ua</li>
-                    <li class="lang option-footer">ru</li>
-                    <li class="lang option-footer">pl</li>
-                    <li class="lang option-footer">en</li>
-                </ul>
-            </div>
-            <div class="foot-element pad-top-2 let-spacing-3">
-                <h5 class="font-size-2 pad-bot-4" data-translate="footer.contact">Kontakt</h5>
+                <h5 class="font-size-2 pad-bot-4" data-translate="footer.contact"></h5>
                 <ul>
                     <li><a target="_blank" href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
-                            src="img/map.svg" alt=""><span data-translate="footer.contact_text.location">Rzeszów</span></a></li>
+                            src="img/map.svg" alt=""><span data-translate="footer.contact_text.location"></span></a></li>
                     <li><a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a></li>
                     <li><a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a></li>
                 </ul>
             </div>
+            <div class="foot-element pad-top-2 let-spacing-3">
+                <h5 class="font-size-2 pad-bot-4" data-translate="footer.cv"></h5>
+                <div class="cv-box">
+                    <ul>
+                        <li><a download href="download/VasylKohutCV.pdf"><img src="img/cv.svg" alt="file">Завантажити резюме</a></li>
+                        <li><a download href="download/VasylKohutCV.pdf"><img src="img/cv.svg" alt="file">Загрузить резюме</a></li>
+                        <li><a download href="download/VasylKohutCV.pdf"><img src="img/cv.svg" alt="file">Pobierz CV</a></li>
+                        <li><a download href="download/VasylKohutCV.pdf"><img src="img/cv.svg" alt="file">Download resume</a></li>
+                    </ul>
+                </div>
+            </div>
             <div id="myContact" class="foot-element pad-top-2 let-spacing-3">
-                <h5 class="font-size-2 pad-bot-4" data-translate="footer.subscribe">Subskrybuj</h5>
+                <h5 class="font-size-2 pad-bot-4" data-translate="footer.subscribe"></h5>
                 <form id="ajax_form">
                     <ul>
                         <li>
-                            <label for="name" data-translate="footer.subscribe_text.name">Imię oraz nazwisko: (wymagane)</label>
+                            <label for="name" data-translate="footer.subscribe_text.name"></label>
                             <input class="text" type="text" id="name" name="name" maxlength="15">
                         </li>
                         <li>
-                            <label for="mail" data-translate="footer.subscribe_text.email">E-mail: (wymagane)</label>
+                            <label for="mail" data-translate="footer.subscribe_text.email"></label>
                             <input class="text" type="email" id="mail" name="mail" maxlength="40">
                         </li>
                         <li>
-                            <label for="msg" data-translate="footer.subscribe_text.message">Wiadomość: (wymagane)</label>
+                            <label for="msg" data-translate="footer.subscribe_text.message"></label>
                             <textarea class="text" id="msg" name="msg"></textarea>
                         </li>
                         <li class="elem-send">
-                            <button id="send" class="neon-button uppercase let-spacing-2 font-size-5" type="button" data-translate="button.send">
-                                Wyślij
-                            </button>
+                            <button id="send" class="neon-button uppercase let-spacing-2 font-size-5" type="button" data-translate="button.send"></button>
                             <div id="result_form"></div>
                         </li>
                     </ul>
