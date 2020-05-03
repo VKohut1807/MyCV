@@ -133,6 +133,39 @@ body{
 .color-special{color: $colSpecial;}
 .background-color-special{background-color: $colSpecial;}
 
+//.header-lang>li{
+//    cursor: pointer;
+//    width: 1em;
+//    height: 1em;
+//    background-size: cover;
+//    margin: 0.1em;
+//}
+//
+//.header-lang{
+//    line-height:1.9em;
+//    display: flex;
+//    flex-direction: row;
+//    flex-wrap: wrap;
+//    width: 2.4em;
+//    height: 2.4em;
+//
+//    .lang-ua{background-image: url("../img/ukr-flag.png");}
+//    .lang-ru{background-image: url("../img/rus-flag.png");}
+//    .lang-pl{background-image: url("../img/pl-flag.png");}
+//    .lang-en{background-image: url("../img/usa-flag.png");}
+//}
+
+.cv-box{
+
+    ul>li{
+        padding: 0.5em 0;
+
+        img{
+            filter: invert(1);
+        }
+    }
+}
+
 header{
     flex-grow: 0;
     width: 100%;
@@ -270,82 +303,103 @@ header{
         }
 
         .about{
+            display: flex;
+            flex-direction: row;
             order: 2;
             margin: auto 0;
 
-                .topmenu > li {
-                    display: inline-block;
-                    position: relative;
-                    margin: 0 1em;
-                }
+            .header-lang>li{
+                cursor: pointer;
+                width: 1em;
+                height: 1em;
+                background-size: cover;
+                margin: 0.1em;
+            }
 
-                .topmenu > li:last-child {
-                    margin-right: 0;
-                }
+            .header-lang{
+                line-height:1.9em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 2.4em;
+                height: 2.4em;
 
-                .topmenu > li > a {
-                    cursor: pointer;
-                    position: relative;
-                    display: block;
+                .lang-ua{background-image: url("../img/ukr-flag.png");}
+                .lang-ru{background-image: url("../img/rus-flag.png");}
+                .lang-pl{background-image: url("../img/pl-flag.png");}
+                .lang-en{background-image: url("../img/usa-flag.png");}
+            }
+
+            .topmenu > li {
+                display: inline-block;
+                position: relative;
+                margin: 0 1em;
+            }
+
+            .topmenu > li > a {
+                cursor: pointer;
+                position: relative;
+                display: block;
+                color: $colWhite;
+                margin: auto;
+            }
+
+            .topmenu > li > a:before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                left: 50%;
+                top: 100%;
+                width: 0.5em;
+                height: 0.5em;
+                background: $colWhite;
+                border-radius: 50%;
+                transform: translate(-50%, 0.25em);
+                opacity: 0;
+                transition: .3s;
+            }
+
+            .submenu {
+                position: absolute;
+                cursor: pointer;
+                text-transform: none;
+                left: 50%;
+                width: 10em;
+                margin-top: 0.3em;
+                background: $colBlack;
+                border-radius: 0.25em;
+                visibility: hidden;
+                opacity: 0;
+                transform: translate(-50%, 1em);
+                transition: .3s;
+
+                a {
+                    transition: .2s linear;
                     color: $colWhite;
+                    padding: 1em;
+                    display: block;
                 }
 
-                .topmenu > li > a:before {
-                    content: "";
-                    position: absolute;
-                    z-index: 1;
-                    left: 50%;
-                    top: 100%;
-                    width: 0.5em;
-                    height: 0.5em;
-                    background: $colWhite;
-                    border-radius: 50%;
-                    transform: translate(-50%, 0.25em);
-                    opacity: 0;
-                    transition: .3s;
+                a:hover {
+                    background: $colGrey;
+                    border-radius: 0.25em;
+                }
+            }
+
+            .topmenu li:hover {
+
+                a:before {
+                    transform: translate(-50%, 0);
+                    opacity: 1;
                 }
 
                 .submenu {
-                    position: absolute;
-                    cursor: pointer;
-                    text-transform: none;
-                    left: 50%;
-                    width: 10em;
-                    margin-top: 0.3em;
-                    background: $colBlack;
-                    border-radius: 0.25em;
-                    visibility: hidden;
-                    opacity: 0;
-                    transform: translate(-50%, 1em);
-                    transition: .3s;
-
-                    a {
-                        transition: .2s linear;
-                        color: $colWhite;
-                        padding: 1em;
-                        display: block;
-                    }
-
-                    a:hover {
-                        background: $colGrey;
-                        border-radius: 0.25em;
-                    }
-                }
-
-                .topmenu li:hover {
-
-                    a:before {
-                        transform: translate(-50%, 0);
-                        opacity: 1;
-                    }
-
-                    .submenu {
-                        visibility: visible;
-                        transform: translate(-50%, 0);
-                        opacity: 0.8;
-                    }
+                    visibility: visible;
+                    transform: translate(-50%, 0);
+                    opacity: 0.8;
                 }
             }
+        }
         //.cv{
         //    width: 10%;
         //    display: flex;
@@ -659,7 +713,7 @@ footer{
 
                 h5{
                     padding-bottom: 1.5em;
-                    font-size: 2em;
+                    font-size: 1.5em;
                 }
             }
 
@@ -1181,7 +1235,7 @@ footer{
             .about {
 
                 .topmenu > li {
-                    margin: 0 2.5em;
+                    margin: 0.25em 2.5em;
                 }
             }
         }

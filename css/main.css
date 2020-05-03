@@ -128,6 +128,11 @@ body {
 .background-color-special {
   background-color: #067dd9; }
 
+.cv-box ul > li {
+  padding: 0.5em 0; }
+  .cv-box ul > li img {
+    filter: invert(1); }
+
 header {
   flex-grow: 0;
   width: 100%;
@@ -221,19 +226,41 @@ header {
       height: 100vh;
       z-index: 5; }
     header .navbar .about {
+      display: flex;
+      flex-direction: row;
       order: 2;
       margin: auto 0; }
+      header .navbar .about .header-lang > li {
+        cursor: pointer;
+        width: 1em;
+        height: 1em;
+        background-size: cover;
+        margin: 0.1em; }
+      header .navbar .about .header-lang {
+        line-height: 1.9em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 2.4em;
+        height: 2.4em; }
+        header .navbar .about .header-lang .lang-ua {
+          background-image: url("../img/ukr-flag.png"); }
+        header .navbar .about .header-lang .lang-ru {
+          background-image: url("../img/rus-flag.png"); }
+        header .navbar .about .header-lang .lang-pl {
+          background-image: url("../img/pl-flag.png"); }
+        header .navbar .about .header-lang .lang-en {
+          background-image: url("../img/usa-flag.png"); }
       header .navbar .about .topmenu > li {
         display: inline-block;
         position: relative;
         margin: 0 1em; }
-      header .navbar .about .topmenu > li:last-child {
-        margin-right: 0; }
       header .navbar .about .topmenu > li > a {
         cursor: pointer;
         position: relative;
         display: block;
-        color: #fff; }
+        color: #fff;
+        margin: auto; }
       header .navbar .about .topmenu > li > a:before {
         content: "";
         position: absolute;
@@ -448,7 +475,7 @@ footer {
     font-size: 4em; }
   body #main #top h5 {
     padding-bottom: 1.5em;
-    font-size: 2em; }
+    font-size: 1.5em; }
   body #main h3 {
     font-size: 170%; }
   body #main #skills .language-group {
@@ -656,7 +683,7 @@ footer {
     width: 59%; } }
 @media only screen and (min-device-width: 1110px) {
   header .navbar .about .topmenu > li {
-    margin: 0 2.5em; }
+    margin: 0.25em 2.5em; }
 
   #main #skills h5 {
     padding-top: 3.5em; }
