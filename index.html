@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="code/scroll.js" defer></script>
+    <script src="code/dictionary.js" defer></script>
+    <script src="code/burger_menu.js" defer></script>
     <script src="code/js.js" defer></script>
+    <script src="code/slick.min.js" defer></script>
+    <script src="code/carusel.js" defer></script>
+    <script src="code/send.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,6 +27,7 @@
                         <li><a onclick="slowScroll('#technologies')" data-translate="menu.technologies"></a></li>
                         <li><a onclick="slowScroll('#languages')" data-translate="menu.languages"></a></li>
                         <li><a onclick="slowScroll('#soft-skills')" data-translate="menu.soft-skills"></a></li>
+                        <!-- <li><a onclick="slowScroll('#myProjects')" data-translate="menu.myProjects"></a></li> -->
                     </ul>
                 </li>
                 <li><a onclick="slowScroll('#experience')" data-translate="menu.experience"></a></li>
@@ -35,7 +42,7 @@
             </ul>
         </nav>
         <div class="menu-burger">
-            <a href="#" class="burger-button">
+            <a class="burger-button">
                 <span class="burger-lines"></span>
             </a>
             <nav class="menu-burger-navigate font-size-5 font-weight-1 let-spacing-2 uppercase pad-top-3 pad-bot-4">
@@ -46,6 +53,8 @@
                    class="marg-left-1 font-size-4" data-translate="menu.languages"></a>
                     <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#soft-skills')"
                    class="marg-left-1 font-size-4" data-translate="menu.soft-skills"></a>
+                    <!-- <a class="burger-podLink font-size-4 font-weight-2" onclick="slowScroll('#myProjects')"
+                   class="marg-left-1 font-size-4" data-translate="menu.myProjects"></a> -->
                 <a class="burger-link" onclick="slowScroll('#experience')" data-translate="menu.experience"></a>
                 <a class="burger-link" onclick="slowScroll('#study')" data-translate="menu.study"></a>
                 <a class="burger-link" onclick="slowScroll('#myContact')" data-translate="menu.myContact"></a>
@@ -178,16 +187,25 @@
                     </div>
                 </div>
                 <h5 id="soft-skills" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.soft-skills"></h5>
-                <ul class="pad-left-1 uppercase font-size-4 font-weight-2 let-spacing-3 pad-top-2 pad-bot-3 float-left">
-                    <li data-translate="main.soft_skills.analytics"></li>
-                    <li data-translate="main.soft_skills.diligence"></li>
-                    <li data-translate="main.soft_skills.efficiency"></li>
-                    <li data-translate="main.soft_skills.precision"></li>
-                    <li data-translate="main.soft_skills.commitment"></li>
-                    <li data-translate="main.soft_skills.ability"></li>
-                    <li data-translate="main.soft_skills.openness"></li>
-                    <li data-translate="main.soft_skills.stress"></li>
-                </ul>
+                <div class="soft_skills-group pad-left-1 uppercase font-size-4 font-weight-2 let-spacing-3 pad-top-2 pad-bot-3">
+                    <ul>
+                        <li data-translate="main.soft_skills.analytics"></li>
+                        <li data-translate="main.soft_skills.diligence"></li>
+                        <li data-translate="main.soft_skills.efficiency"></li>
+                        <li data-translate="main.soft_skills.precision"></li>
+                        <li data-translate="main.soft_skills.commitment"></li>
+                        <li data-translate="main.soft_skills.ability"></li>
+                        <li data-translate="main.soft_skills.openness"></li>
+                        <li data-translate="main.soft_skills.stress"></li>
+                    </ul>
+                </div>
+                <!-- to include when it will be mines 3 projects!!! -->
+                <!-- <h5 id="myProjects" class="pad-top-2 let-spacing-2 font-size-2 font-weight-2 elem-center uppercase" data-translate="menu.myProjects"></h5>
+                <div class="slider pad-top-2 pad-bot-3">
+                    <div class="slider__item">
+                        <a href=""><img src="img/---------------------------.jpg" alt=""></a>
+                    </div>
+                </div>         -->
             </div>
         </div>
     </section>
@@ -280,12 +298,14 @@
         <div class="foot-block">
             <div class="foot-element pad-top-2 let-spacing-3">
                 <h5 class="font-size-2 pad-bot-4" data-translate="footer.contact"></h5>
-                <ul>
-                    <li><a target="_blank" href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
-                            src="img/map.svg" alt=""><span data-translate="footer.contact_text.location"></span></a></li>
-                    <li><a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a></li>
-                    <li><a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a></li>
-                </ul>
+                <div class="contact-box">
+                    <ul>
+                        <li><a target="_blank" href="https://www.google.pl/maps/place/%D0%A0%D1%8F%D1%88%D1%96%D0%B2/@50.0053456,21.8483723,11z/data=!3m1!4b1!4m5!3m4!1s0x473cfae3cc14d449:0xd2240d31b33eb2ed!8m2!3d50.0411867!4d21.9991196"><img
+                                src="img/map.svg" alt=""><span data-translate="footer.contact_text.location"></span></a></li>
+                        <li><a href="tel:+48577112095"><img src="img/phone.svg" alt="">+ (48) 577 112 095</a></li>
+                        <li><a href="mailto:vasylkohut1991@gmail.com"><img src="img/mail.svg" alt="">vasylkohut1991@gmail.com</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="foot-element pad-top-2 let-spacing-3">
                 <h5 class="font-size-2 pad-bot-4" data-translate="footer.cv"></h5>
