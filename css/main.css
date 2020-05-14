@@ -128,11 +128,6 @@ body {
 .background-color-special {
   background-color: #067dd9; }
 
-.cv-box ul > li {
-  padding: 0.5em 0; }
-  .cv-box ul > li img {
-    filter: invert(1); }
-
 header {
   flex-grow: 0;
   width: 100%;
@@ -354,13 +349,68 @@ header {
         #main #skills .language-group figure img {
           width: 100%;
           height: 5em; }
-    #main #skills li {
-      float: left;
-      padding-right: 1em; }
-    #main #skills li:before {
-      content: "\270e";
-      color: #067dd9;
-      margin-right: 0.25em; }
+    #main #skills .soft_skills-group ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      #main #skills .soft_skills-group ul li {
+        padding-right: 1em;
+        height: 100%; }
+      #main #skills .soft_skills-group ul li:before {
+        content: "\270e";
+        color: #067dd9;
+        margin-right: 0.25em; }
+    #main #skills .slider {
+      position: relative;
+      padding: 0px 60px;
+      z-index: -1; }
+      #main #skills .slider .slick-slider {
+        min-width: 0; }
+      #main #skills .slider .slick-list {
+        overflow: hidden; }
+      #main #skills .slider .slick-track {
+        display: flex;
+        align-items: flex-start; }
+      #main #skills .slider .slick-arrow {
+        color: none;
+        position: absolute;
+        top: 50%;
+        margin: -30px 0px 0px 0px;
+        font-size: 0;
+        width: 30px;
+        height: 60px;
+        border: 0; }
+      #main #skills .slider .slick-prev {
+        left: 0;
+        filter: invert(1);
+        background: url("../img/sl-arrow_l.svg") 0 0/100% no-repeat; }
+      #main #skills .slider .slick-next {
+        right: 0;
+        filter: invert(1);
+        background: url("../img/sl-arrow_r.svg") 0 0/100% no-repeat; }
+      #main #skills .slider .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        #main #skills .slider .slick-dots li {
+          margin: 0px 1em; }
+        #main #skills .slider .slick-dots button {
+          font-size: 0;
+          width: 10px;
+          height: 10px;
+          border: 1px solid #000;
+          border-radius: 50%; }
+        #main #skills .slider .slick-dots .slick-active button {
+          background-color: #000; }
+      #main #skills .slider .slider__item {
+        padding: 0px 15px;
+        opacity: 0.4;
+        text-align: center;
+        transition: all 0.3s ease 0s; }
+        #main #skills .slider .slider__item img {
+          max-width: 100%; }
+      #main #skills .slider .slick-center {
+        opacity: 1; }
   #main #experience {
     color: #fff;
     width: 100%;
@@ -411,6 +461,10 @@ footer {
       display: flex;
       flex-direction: column;
       min-width: 33%; }
+      footer .foot-block .foot-element .contact-box ul > li, footer .foot-block .foot-element .cv-box ul > li {
+        padding: 0.5em 0; }
+      footer .foot-block .foot-element .cv-box li img {
+        filter: invert(1); }
       footer .foot-block .foot-element .lang:hover {
         cursor: pointer;
         color: #067dd9;

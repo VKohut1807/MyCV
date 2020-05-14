@@ -66,31 +66,6 @@ body{
     }
 }
 
-//.clas1{
-//    position: fixed;
-//    top: 50%;
-//    right: 0;
-//    width: 1em;
-//    height: 3em;
-//    background: #00CC00;
-//    z-index: 10;
-//    transition: 0.5s;
-//}
-//
-//.arrow{
-//    //align-items: center;
-//    //border: solid white;
-//    //border-width: 0 4px 4px 0;
-//    //display: inline-block;
-//    //padding: 0.5em;
-//    //transform: rotate(135deg);
-//    //-webkit-transform: rotate(135deg);
-//}
-//
-//.clas1:hover{
-//    width: 3em;
-//}
-
 .let-spacing-1{letter-spacing: 0.1em;}
 .let-spacing-2{letter-spacing: 0.18em;}
 .let-spacing-3{letter-spacing: 0.05em;}
@@ -132,39 +107,6 @@ body{
 
 .color-special{color: $colSpecial;}
 .background-color-special{background-color: $colSpecial;}
-
-//.header-lang>li{
-//    cursor: pointer;
-//    width: 1em;
-//    height: 1em;
-//    background-size: cover;
-//    margin: 0.1em;
-//}
-//
-//.header-lang{
-//    line-height:1.9em;
-//    display: flex;
-//    flex-direction: row;
-//    flex-wrap: wrap;
-//    width: 2.4em;
-//    height: 2.4em;
-//
-//    .lang-ua{background-image: url("../img/ukr-flag.png");}
-//    .lang-ru{background-image: url("../img/rus-flag.png");}
-//    .lang-pl{background-image: url("../img/pl-flag.png");}
-//    .lang-en{background-image: url("../img/usa-flag.png");}
-//}
-
-.cv-box{
-
-    ul>li{
-        padding: 0.5em 0;
-
-        img{
-            filter: invert(1);
-        }
-    }
-}
 
 header{
     flex-grow: 0;
@@ -400,34 +342,6 @@ header{
                 }
             }
         }
-        //.cv{
-        //    width: 10%;
-        //    display: flex;
-        //    justify-content: flex-end;
-        //
-        //    a{
-        //        padding: 0 0.5em;
-        //        border: 1px solid $colSpecial;
-        //        border-radius: .25em;
-        //        color: $colWhite;
-        //        line-height: 45px;
-        //        background: none;
-        //
-        //        .downarrow::before{
-        //            content: '\21D3';
-        //            color: $colWhite;
-        //        }
-        //    }
-        //
-        //    a:hover{
-        //        background: $colSpecial;
-        //        color: $colBlack;
-        //
-        //        .downarrow::before{
-        //        color: $colBlack;
-        //        }
-        //    }
-        //}
     }
 }
 
@@ -508,15 +422,102 @@ header{
             }
         }
 
-        li{
-            float: left;
-            padding-right: 1em;
+        .soft_skills-group{
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                li{
+                    padding-right: 1em;
+                    height: 100%;
+                }
+
+                li:before{
+                    content: "\270e";
+                    color: $colSpecial;
+                    margin-right: 0.25em;
+                }
+            }
         }
 
-        li:before{
-            content: "\270e";
-            color: $colSpecial;
-            margin-right: 0.25em;
+        .slider {
+            position: relative;
+            padding: 0px 60px;
+            z-index: -1;
+        
+            .slick-slider{
+                min-width: 0;
+            }
+            
+            .slick-list {
+                overflow: hidden;
+            }
+            
+            .slick-track{
+                display: flex;
+                align-items: flex-start;
+            }
+        
+            .slick-arrow{
+                color: none;
+                position: absolute;
+                top: 50%;
+                margin: -30px 0px 0px 0px;
+                font-size: 0;
+                width: 30px;
+                height: 60px;
+                border: 0;
+            }
+        
+            .slick-prev{
+                left: 0;
+                filter: invert(1);
+                background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+            }
+            .slick-next{
+                right: 0;
+                filter: invert(1);
+                background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+            }
+        
+            .slick-dots{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                li{
+                    margin: 0px 1em;
+                }
+        
+                button{
+                    font-size: 0;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid $colBlack;
+                    border-radius: 50%;
+                }
+        
+                .slick-active button{
+                    background-color: $colBlack;
+                }
+            }
+        
+            .slider__item{
+                padding: 0px 15px;
+                opacity: 0.4;
+                text-align: center;
+                transition: all 0.3s ease 0s;
+            
+                img{
+                    max-width: 100%;
+                }
+            }
+            
+            .slick-center{
+                opacity: 1;
+            }
         }
     }
 
@@ -593,6 +594,21 @@ footer{
             display: flex;
             flex-direction: column;
             min-width: 33%;
+
+            .contact-box, .cv-box{
+                ul>li{
+                    padding: 0.5em 0;
+                }
+            }
+            .cv-box{
+
+                li{
+                                
+                    img{
+                        filter: invert(1);
+                    }
+                }
+            }
 
             .lang:hover {
                 cursor: pointer;
