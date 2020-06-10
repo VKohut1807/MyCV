@@ -1,38 +1,34 @@
 "use strict";
-$("#send").on("click", function () {
+$("#ajax_form").on("submit", function (event) {
+    event.preventDefault();
     let name = $("#name").val().trim();
-    let mail = $("#mail").val().trim();
+    let email = $("#email").val().trim();
     let msg = $("#msg").val().trim();
     if (name == "") {
         $("#result_form").text("Please leave your name!");
         return false;
-    } else if (mail == "") {
+    } else if (email == "") {
         $("#result_form").text("Please leave your e-mail!");
         return false;
     } else if (msg == "" || msg.length > 360) {
         $("#result_form").text("Please leave a message!");
         return false;
     }
-    $("#result_form").text(`Message has been sent!`).addClass("color-special");
+    let all_date = new FormData(this);
     $.ajax({
-        url: 'code/send.php',
+        url: 'send.php',
         type: 'POST',
+        contentType: false,
+        processData: false,
         cache: false,
-        data: {'name': name, 'mail': mail, 'msg': msg},
-        dataType: "html",
-        beforeSend: function () {
-            $("#send").prop("disabled", true);
-        },
-        success:
-            function () {
-                $("#send").prop("disabled", false)
+        data: all_date,
+        success: function(messages){
+            if(messages == 'success') {
+                $("#result_form").text(`Message has been sent!`).addClass("color-special");
+            } else {
+                alert('Error, failed to send response message!')
             }
-        // function(){
-        // if(!data)
-        //     alert("pomylky")
-        // else
-        //     $("#ajax_form").trigger("reset");
-        // $("#send").prop("disabled", false);
-        // }
+        $('#ajax_form')[0].reset();
+        }
     });
 });

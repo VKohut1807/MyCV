@@ -1,36 +1,43 @@
 <?php
+// Файлы phpmailer
+require 'class.phpmailer.php';
+require 'class.smtp.php';
+
 $name = $_POST['name'];
-$mail = $_POST['mail'];
+$email = $_POST['email'];
 $msg = $_POST['msg'];
 
-$to = "vasylkohut1991@gmail.co"; /* Адрес, куда отправляем письма!!!!!!*/
-$subject = "Письмо с обратной связи"; /*Тема письма*/
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html; charset=utf-8\r\n";
-$headers .= "From: $mail\r\n";/*ОТ КОГО*/
+// Формирование самого письма
+$title = "From My Site";
+$body = "
+<h2>New message</h2>
+<b>Name:</b> $name<br>
+<b>From:</b> $email<br><br>
+<b>Message:</b><br>$msg";
 
-/*ВО ВНУТРЬ ПЕРЕМЕННОЙ $message ЗАПИСЫВАЕМ ДАННЫЕ ИЗ ПОЛЕЙ */
-$message .= "Имя пользователя: ".$name."\n";
-$message .= "Почта: ".$mail."\n";
-$message .= "Сообщение: ".$msg."\n";
+// Настройки
+$mail = new PHPMailer;
+$mail->isSMTP(); 
+$mail->Host = 'smtp.gmail.com';  
+$mail->CharSet = "UTF-8";
+$mail->SMTPAuth = true;                      
+$mail->Username = '******'; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
+$mail->Password = '******'; // Ваш пароль
+$mail->SMTPSecure = 'ssl';                            
+$mail->Port = 465;
+$mail->setFrom('VKohut1807@gmail.com'); // Ваш Email
+$mail->addAddress('vasylkohut1991@gmail.com'); // Email получателя
 
-$send = mail($to, $subject, $message, $headers);
-if ($send == "true"){
-    echo "Ваше сообщение отправлено. Мы ответим вам в ближайшее время.\r\n";
+// Письмо
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;
+
+// Результат
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'success';
 }
-/*ЕСЛИ ПИСЬМО НЕ УДАЛОСЬ ОТПРАВИТЬ ВЫВОДИМ СООБЩЕНИЕ ОБ ОШИБКЕ*/
-else{
-    echo "Не удалось отправить, попробуйте снова!";
-}
-
-
-
-
-
-
-// $subject = "=@utf-8?B?".base64_encode("soobszczenieje z sajta")."?="
-// $headers = "From: $mail\r\nReply-to: $mail\r\nContent-type: text/html; charset=utf-8\r\n";
-
-// $success = mail('vasylkohut1991@gmail.com', $subject, $headers, $name, $mail, $msg);
-// echo $success;
 ?>
