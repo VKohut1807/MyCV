@@ -16,7 +16,7 @@ $("#ajax_form").on("submit", function (event) {
     }
     let all_date = new FormData(this);
     $.ajax({
-        url: 'send.php',
+        url: 'code/send.php',
         type: 'POST',
         contentType: false,
         processData: false,
